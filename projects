@@ -1,0 +1,2964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildRight Construction | Bold Industrial Construction Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        :root {
+            /* Color Palette - Bold Industrial */
+            --primary: #ffb400;
+            --primary-dark: #e09900;
+            --secondary: #292929;
+            --secondary-light: #3d3d3d;
+            --dark: #111111;
+            --light: #f7f7f7;
+            --white: #ffffff;
+            --gray-100: #f5f5f5;
+            --gray-200: #e0e0e0;
+            --gray-300: #b0b0b0;
+            --gray-400: #888888;
+            --gray-500: #666666;
+            --gray-600: #444444;
+            --accent: #ff4a3c;
+
+            /* Typography */
+            --font-display: 'Bebas Neue', sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --fs-display-xl: clamp(3.5rem, 10vw, 6rem);
+            --fs-display-lg: clamp(2.5rem, 7vw, 4.5rem);
+            --fs-display-md: clamp(2rem, 5vw, 3.5rem);
+            --fs-display-sm: clamp(1.75rem, 3vw, 2.5rem);
+            --fs-xl: clamp(1.5rem, 2vw, 2rem);
+            --fs-lg: clamp(1.25rem, 1.5vw, 1.5rem);
+            --fs-md: 1.125rem;
+            --fs-base: 1rem;
+            --fs-sm: 0.875rem;
+            --fs-xs: 0.75rem;
+            --line-height-tight: 1.1;
+            --line-height-normal: 1.5;
+            --line-height-loose: 1.8;
+            --tracking-tight: -0.025em;
+            --tracking-normal: 0;
+            --tracking-wide: 0.05em;
+            --tracking-wider: 0.1em;
+
+            /* Spacing */
+            --space-3xs: clamp(0.25rem, 0.5vw, 0.375rem);
+            --space-2xs: clamp(0.5rem, 0.75vw, 0.75rem);
+            --space-xs: clamp(0.75rem, 1vw, 1rem);
+            --space-sm: clamp(1rem, 1.5vw, 1.5rem);
+            --space-md: clamp(1.5rem, 2.5vw, 2rem);
+            --space-lg: clamp(2rem, 3vw, 3rem);
+            --space-xl: clamp(3rem, 4vw, 4rem);
+            --space-2xl: clamp(4rem, 6vw, 6rem);
+            --space-3xl: clamp(6rem, 8vw, 8rem);
+            
+            /* Layout */
+            --container-max: 1440px;
+            --container-sm: 640px;
+            --container-md: 768px;
+            --container-lg: 1024px;
+            --container-xl: 1280px;
+            --navbar-height: 80px;
+            --section-padding: var(--space-2xl) 0;
+            
+            /* Effects */
+            --border-radius-sm: 4px;
+            --border-radius-md: 8px;
+            --border-radius-lg: 12px;
+            --border-radius-xl: 16px;
+            --border-width: 1px;
+            --border-width-thick: 3px;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+
+        /* Reset & Base Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--navbar-height);
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--secondary);
+            line-height: var(--line-height-normal);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--secondary);
+            transition: color var(--transition-normal);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 var(--space-sm);
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: var(--line-height-tight);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            color: var(--dark);
+            margin-bottom: var(--space-sm);
+        }
+
+        h1 {
+            font-size: var(--fs-display-xl);
+            letter-spacing: var(--tracking-tight);
+        }
+
+        h2 {
+            font-size: var(--fs-display-md);
+        }
+
+        h3 {
+            font-size: var(--fs-display-sm);
+        }
+
+        p {
+            margin-bottom: var(--space-md);
+        }
+
+        .text-primary {
+            color: var(--primary);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-uppercase {
+            text-transform: uppercase;
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            font-family: var(--font-display);
+            font-size: var(--fs-md);
+            padding: var(--space-xs) var(--space-md);
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            font-weight: 700;
+            transition: all var(--transition-normal);
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            min-width: 180px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--dark);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--secondary-light);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+            border: var(--border-width-thick) solid var(--primary);
+            color: var(--dark);
+            background-color: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+
+        /* Utilities */
+        .mt-0 { margin-top: 0; }
+        .mt-sm { margin-top: var(--space-sm); }
+        .mt-md { margin-top: var(--space-md); }
+        .mt-lg { margin-top: var(--space-lg); }
+        .mt-xl { margin-top: var(--space-xl); }
+
+        .mb-0 { margin-bottom: 0; }
+        .mb-sm { margin-bottom: var(--space-sm); }
+        .mb-md { margin-bottom: var(--space-md); }
+        .mb-lg { margin-bottom: var(--space-lg); }
+        .mb-xl { margin-bottom: var(--space-xl); }
+
+        .pt-0 { padding-top: 0; }
+        .pt-sm { padding-top: var(--space-sm); }
+        .pt-md { padding-top: var(--space-md); }
+        .pt-lg { padding-top: var(--space-lg); }
+        .pt-xl { padding-top: var(--space-xl); }
+
+        .pb-0 { padding-bottom: 0; }
+        .pb-sm { padding-bottom: var(--space-sm); }
+        .pb-md { padding-bottom: var(--space-md); }
+        .pb-lg { padding-bottom: var(--space-lg); }
+        .pb-xl { padding-bottom: var(--space-xl); }
+
+        .bg-dark { background-color: var(--dark); }
+        .bg-primary { background-color: var(--primary); }
+        .bg-secondary { background-color: var(--secondary); }
+        .bg-light { background-color: var(--light); }
+        .bg-white { background-color: var(--white); }
+
+        .text-white { color: var(--white); }
+        .text-dark { color: var(--dark); }
+
+        /* Grid & Layout */
+        .grid {
+            display: grid;
+            gap: var(--space-md);
+        }
+
+        .grid-2 {
+            grid-template-columns: 1fr;
+        }
+
+        .grid-3 {
+            grid-template-columns: 1fr;
+        }
+
+        .grid-4 {
+            grid-template-columns: 1fr;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .gap-sm {
+            gap: var(--space-sm);
+        }
+
+        .gap-md {
+            gap: var(--space-md);
+        }
+
+        .gap-lg {
+            gap: var(--space-lg);
+        }
+
+        @media (min-width: 768px) {
+            .grid-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .grid-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .grid-4 {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
+        }
+
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: var(--navbar-height);
+            padding: 0 var(--space-sm);
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: var(--fs-xl);
+            font-weight: 700;
+            color: var(--dark);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            line-height: 1;
+            transition: color var(--transition-normal);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-toggle {
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: var(--space-3xs);
+            z-index: 2000;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: var(--dark);
+            margin: 6px 0;
+            transition: var(--transition-normal);
+        }
+
+        .nav-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+
+        .nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: right var(--transition-normal);
+            z-index: 1500;
+        }
+
+        .nav-menu.active {
+            right: 0;
+        }
+
+        .nav-menu a {
+            font-family: var(--font-display);
+            font-size: var(--fs-lg);
+            color: var(--dark);
+            margin: var(--space-xs) 0;
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            position: relative;
+            display: inline-block;
+            padding: var(--space-3xs) var(--space-xs);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary);
+            transition: width var(--transition-normal);
+        }
+
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            margin-top: var(--space-md);
+        }
+
+        @media (min-width: 1024px) {
+            .nav-toggle {
+                display: none;
+            }
+
+            .nav-menu {
+                position: static;
+                width: auto;
+                height: auto;
+                background-color: transparent;
+                flex-direction: row;
+                gap: var(--space-md);
+            }
+
+            .nav-menu a {
+                font-size: var(--fs-md);
+                margin: 0;
+            }
+
+            .nav-cta {
+                margin-top: 0;
+                margin-left: var(--space-md);
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            background-color: var(--dark);
+            margin-top: var(--navbar-height);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            padding: var(--space-lg) 0;
+        }
+
+        .hero-content h1 {
+            color: var(--white);
+            margin-bottom: var(--space-md);
+            position: relative;
+        }
+
+        .hero-content h1::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 100px;
+            height: 5px;
+            background-color: var(--primary);
+        }
+
+        .hero-content p {
+            font-size: var(--fs-lg);
+            color: var(--gray-200);
+            margin-bottom: var(--space-lg);
+            max-width: 600px;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: var(--section-padding);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+            position: relative;
+        }
+
+        .section-title h2 {
+            display: inline-block;
+            margin-bottom: var(--space-xs);
+            position: relative;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+        }
+
+        .section-title p {
+            font-size: var(--fs-lg);
+            color: var(--gray-500);
+            max-width: 700px;
+            margin: var(--space-sm) auto;
+        }
+
+        /* About Section */
+        .about-img {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: var(--space-md);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            transition: transform var(--transition-normal);
+        }
+
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-experience {
+            position: absolute;
+            bottom: var(--space-md);
+            left: var(--space-md);
+            background-color: var(--primary);
+            padding: var(--space-sm);
+            color: var(--dark);
+            font-weight: 700;
+            z-index: 10;
+            text-align: center;
+            min-width: 140px;
+        }
+
+        .about-experience span {
+            display: block;
+            font-size: var(--fs-display-sm);
+            line-height: 1;
+            font-family: var(--font-display);
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-md);
+        }
+
+        .about-feature-icon {
+            background-color: var(--primary);
+            color: var(--dark);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: var(--space-sm);
+            font-size: var(--fs-lg);
+            flex-shrink: 0;
+        }
+
+        .about-feature-content h4 {
+            font-size: var(--fs-lg);
+            margin-bottom: var(--space-2xs);
+        }
+
+        .about-content h2 {
+            text-align: left;
+            margin-bottom: var(--space-md);
+        }
+
+        .about-content h2::after {
+            left: 0;
+            transform: none;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--light);
+        }
+
+        .service-card {
+            background-color: var(--white);
+            padding: var(--space-md);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--gray-200);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background-color: var(--primary);
+            transition: height var(--transition-slow);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-card:hover::before {
+            height: 100%;
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--primary);
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--fs-xl);
+            margin-bottom: var(--space-md);
+            transition: transform var(--transition-normal);
+        }
+
+        .service-card:hover .service-icon {
+            transform: rotateY(180deg);
+        }
+
+        .service-card h3 {
+            font-size: var(--fs-lg);
+            margin-bottom: var(--space-sm);
+            position: relative;
+            padding-bottom: var(--space-xs);
+        }
+
+        .service-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .service-card p {
+            margin-bottom: var(--space-md);
+            color: var(--gray-600);
+        }
+
+        .service-card .btn {
+            margin-top: auto;
+        }
+
+        /* builds and renovations Section */
+        .project-item {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: var(--space-md);
+        }
+
+        .project-img {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 16/9;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-normal);
+        }
+
+        .project-item:hover .project-img img {
+            transform: scale(1.1);
+        }
+
+        .project-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: var(--space-md);
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+            transition: opacity var(--transition-normal);
+        }
+
+        .project-title {
+            color: var(--white);
+            margin-bottom: var(--space-2xs);
+        }
+
+        .project-category {
+            color: var(--primary);
+            font-weight: 500;
+            font-size: var(--fs-sm);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+        }
+
+        .project-link {
+            position: absolute;
+            top: var(--space-md);
+            right: var(--space-md);
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--fs-lg);
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity var(--transition-normal), transform var(--transition-normal);
+        }
+
+        .project-item:hover .project-link {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stats Section */
+        .stats {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: var(--space-xl) 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            margin-bottom: var(--space-md);
+        }
+
+        .stat-icon {
+            font-size: var(--fs-display-sm);
+            color: var(--primary);
+            margin-bottom: var(--space-sm);
+        }
+
+        .stat-number {
+            font-size: var(--fs-display-sm);
+            font-weight: 900;
+            color: var(--white);
+            font-family: var(--font-display);
+            margin-bottom: var(--space-2xs);
+            line-height: 1;
+        }
+
+        .stat-text {
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            font-size: var(--fs-sm);
+            color: var(--gray-300);
+        }
+
+        /* Why Choose Us */
+        .why-choose-us {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-choose-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        .why-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .why-item {
+            background-color: var(--white);
+            padding: var(--space-md);
+            margin-bottom: var(--space-md);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            border: 1px solid var(--gray-200);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: var(--primary);
+            transition: width var(--transition-normal);
+        }
+
+        .why-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .why-item:hover::after {
+            width: 100%;
+        }
+
+        .why-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: var(--space-sm);
+        }
+
+        .why-item h4 {
+            margin-bottom: var(--space-xs);
+            font-size: var(--fs-lg);
+        }
+
+        .why-item p {
+            color: var(--gray-600);
+            margin-bottom: 0;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--light);
+        }
+
+        .testimonial-item {
+            background-color: var(--white);
+            padding: var(--space-md);
+            margin-bottom: var(--space-md);
+            position: relative;
+            border: 1px solid var(--gray-200);
+        }
+
+        .testimonial-item::before {
+            content: '"';
+            font-size: 120px;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            color: var(--primary);
+            opacity: 0.2;
+            font-family: var(--font-display);
+            line-height: 1;
+        }
+
+        .testimonial-content {
+            position: relative;
+            z-index: 10;
+            margin-bottom: var(--space-md);
+            font-style: italic;
+            color: var(--gray-600);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: var(--space-sm);
+        }
+
+        .testimonial-author-info h5 {
+            margin-bottom: 0;
+            font-size: var(--fs-md);
+        }
+
+        .testimonial-author-info span {
+            color: var(--gray-500);
+            font-size: var(--fs-sm);
+        }
+
+        /* CTA Section */
+        .cta {
+            background-color: var(--primary);
+            color: var(--dark);
+            padding: var(--space-xl) 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: var(--dark);
+            margin-bottom: var(--space-md);
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto var(--space-lg);
+            font-size: var(--fs-lg);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark);
+            color: var(--gray-300);
+            padding-top: var(--space-xl);
+        }
+
+        .footer h4 {
+            color: var(--white);
+            margin-bottom: var(--space-md);
+            padding-bottom: var(--space-xs);
+            position: relative;
+        }
+
+        .footer h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .footer p {
+            margin-bottom: var(--space-md);
+        }
+
+        .footer-about {
+            margin-bottom: var(--space-lg);
+        }
+
+        .footer-links {
+            margin-bottom: var(--space-lg);
+        }
+
+        .footer-links ul li {
+            margin-bottom: var(--space-xs);
+        }
+
+        .footer-links ul li a {
+            color: var(--gray-300);
+            transition: color var(--transition-normal), padding-left var(--transition-normal);
+            display: block;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--primary);
+            padding-left: var(--space-xs);
+        }
+
+        .footer-links ul li a i {
+            margin-right: var(--space-2xs);
+            color: var(--primary);
+        }
+
+        .footer-contact-item {
+            display: flex;
+            margin-bottom: var(--space-sm);
+        }
+
+        .footer-contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: var(--space-sm);
+            flex-shrink: 0;
+        }
+
+        .footer-contact-text h5 {
+            color: var(--white);
+            margin-bottom: 0;
+            font-size: var(--fs-md);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: var(--space-xs);
+            margin-top: var(--space-md);
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color var(--transition-normal), color var(--transition-normal);
+        }
+
+        .footer-social a:hover {
+            background-color: var(--primary);
+            color: var(--dark);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: var(--space-md) 0;
+            margin-top: var(--space-xl);
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 0;
+        }
+
+        /* Responsive Media Queries */
+        @media (min-width: 768px) {
+            .hero-content h1 {
+                font-size: var(--fs-display-xl);
+            }
+
+            .about-img {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .section-title {
+                margin-bottom: var(--space-2xl);
+            }
+
+            .footer-about,
+            .footer-links {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style type="text/css">
+        :root {
+            --primary: #ffb400;
+            --primary-dark: #e09900;
+            --secondary: #292929;
+            --secondary-light: #3d3d3d;
+            --dark: #111111;
+            --light: #f7f7f7;
+            --white: #ffffff;
+            --gray-100: #f5f5f5;
+            --gray-200: #e0e0e0;
+            --gray-300: #b0b0b0;
+            --gray-400: #888888;
+            --gray-500: #666666;
+            --gray-600: #444444;
+            --accent: #ff4a3c;
+            --font-display: 'Bebas Neue', sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --fs-display-xl: clamp(3.5rem, 10vw, 6rem);
+            --fs-display-lg: clamp(2.5rem, 7vw, 4.5rem);
+            --fs-display-md: clamp(2rem, 5vw, 3.5rem);
+            --fs-display-sm: clamp(1.75rem, 3vw, 2.5rem);
+            --fs-xl: clamp(1.5rem, 2vw, 2rem);
+            --fs-lg: clamp(1.25rem, 1.5vw, 1.5rem);
+            --fs-md: 1.125rem;
+            --fs-base: 1rem;
+            --fs-sm: 0.875rem;
+            --fs-xs: 0.75rem;
+            --line-height-tight: 1.1;
+            --line-height-normal: 1.5;
+            --line-height-loose: 1.8;
+            --tracking-tight: -0.025em;
+            --tracking-normal: 0;
+            --tracking-wide: 0.05em;
+            --tracking-wider: 0.1em;
+            --space-3xs: clamp(0.25rem, 0.5vw, 0.375rem);
+            --space-2xs: clamp(0.5rem, 0.75vw, 0.75rem);
+            --space-xs: clamp(0.75rem, 1vw, 1rem);
+            --space-sm: clamp(1rem, 1.5vw, 1.5rem);
+            --space-md: clamp(1.5rem, 2.5vw, 2rem);
+            --space-lg: clamp(2rem, 3vw, 3rem);
+            --space-xl: clamp(3rem, 4vw, 4rem);
+            --space-2xl: clamp(4rem, 6vw, 6rem);
+            --space-3xl: clamp(6rem, 8vw, 8rem);
+            --container-max: 1440px;
+            --container-sm: 640px;
+            --container-md: 768px;
+            --container-lg: 1024px;
+            --container-xl: 1280px;
+            --navbar-height: 80px;
+            --section-padding: var(--space-2xl) 0;
+            --border-radius-sm: 4px;
+            --border-radius-md: 8px;
+            --border-radius-lg: 12px;
+            --border-radius-xl: 16px;
+            --border-width: 1px;
+            --border-width-thick: 3px;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+
+
+        :root {
+            /* Color Palette - Bold Industrial */
+            --primary: #ffb400;
+            --primary-dark: #e09900;
+            --secondary: #292929;
+            --secondary-light: #3d3d3d;
+            --dark: #111111;
+            --light: #f7f7f7;
+            --white: #ffffff;
+            --gray-100: #f5f5f5;
+            --gray-200: #e0e0e0;
+            --gray-300: #b0b0b0;
+            --gray-400: #888888;
+            --gray-500: #666666;
+            --gray-600: #444444;
+            --accent: #ff4a3c;
+
+            /* Typography */
+            --font-display: 'Bebas Neue', sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --fs-display-xl: clamp(3.5rem, 10vw, 6rem);
+            --fs-display-lg: clamp(2.5rem, 7vw, 4.5rem);
+            --fs-display-md: clamp(2rem, 5vw, 3.5rem);
+            --fs-display-sm: clamp(1.75rem, 3vw, 2.5rem);
+            --fs-xl: clamp(1.5rem, 2vw, 2rem);
+            --fs-lg: clamp(1.25rem, 1.5vw, 1.5rem);
+            --fs-md: 1.125rem;
+            --fs-base: 1rem;
+            --fs-sm: 0.875rem;
+            --fs-xs: 0.75rem;
+            --line-height-tight: 1.1;
+            --line-height-normal: 1.5;
+            --line-height-loose: 1.8;
+            --tracking-tight: -0.025em;
+            --tracking-normal: 0;
+            --tracking-wide: 0.05em;
+            --tracking-wider: 0.1em;
+
+            /* Spacing */
+            --space-3xs: clamp(0.25rem, 0.5vw, 0.375rem);
+            --space-2xs: clamp(0.5rem, 0.75vw, 0.75rem);
+            --space-xs: clamp(0.75rem, 1vw, 1rem);
+            --space-sm: clamp(1rem, 1.5vw, 1.5rem);
+            --space-md: clamp(1.5rem, 2.5vw, 2rem);
+            --space-lg: clamp(2rem, 3vw, 3rem);
+            --space-xl: clamp(3rem, 4vw, 4rem);
+            --space-2xl: clamp(4rem, 6vw, 6rem);
+            --space-3xl: clamp(6rem, 8vw, 8rem);
+            
+            /* Layout */
+            --container-max: 1440px;
+            --container-sm: 640px;
+            --container-md: 768px;
+            --container-lg: 1024px;
+            --container-xl: 1280px;
+            --navbar-height: 80px;
+            --section-padding: var(--space-2xl) 0;
+            
+            /* Effects */
+            --border-radius-sm: 4px;
+            --border-radius-md: 8px;
+            --border-radius-lg: 12px;
+            --border-radius-xl: 16px;
+            --border-width: 1px;
+            --border-width-thick: 3px;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+
+        /* Reset & Base Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--navbar-height);
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--secondary);
+            line-height: var(--line-height-normal);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--secondary);
+            transition: color var(--transition-normal);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 var(--space-sm);
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: var(--line-height-tight);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            color: var(--dark);
+            margin-bottom: var(--space-sm);
+        }
+
+        h1 {
+            font-size: var(--fs-display-xl);
+            letter-spacing: var(--tracking-tight);
+        }
+
+        h2 {
+            font-size: var(--fs-display-md);
+        }
+
+        h3 {
+            font-size: var(--fs-display-sm);
+        }
+
+        p {
+            margin-bottom: var(--space-md);
+        }
+
+        .text-primary {
+            color: var(--primary);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-uppercase {
+            text-transform: uppercase;
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            font-family: var(--font-display);
+            font-size: var(--fs-md);
+            padding: var(--space-xs) var(--space-md);
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            font-weight: 700;
+            transition: all var(--transition-normal);
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            min-width: 180px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--dark);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--secondary-light);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+            border: var(--border-width-thick) solid var(--primary);
+            color: var(--dark);
+            background-color: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+
+        /* Utilities */
+        .mt-0 { margin-top: 0; }
+        .mt-sm { margin-top: var(--space-sm); }
+        .mt-md { margin-top: var(--space-md); }
+        .mt-lg { margin-top: var(--space-lg); }
+        .mt-xl { margin-top: var(--space-xl); }
+
+        .mb-0 { margin-bottom: 0; }
+        .mb-sm { margin-bottom: var(--space-sm); }
+        .mb-md { margin-bottom: var(--space-md); }
+        .mb-lg { margin-bottom: var(--space-lg); }
+        .mb-xl { margin-bottom: var(--space-xl); }
+
+        .pt-0 { padding-top: 0; }
+        .pt-sm { padding-top: var(--space-sm); }
+        .pt-md { padding-top: var(--space-md); }
+        .pt-lg { padding-top: var(--space-lg); }
+        .pt-xl { padding-top: var(--space-xl); }
+
+        .pb-0 { padding-bottom: 0; }
+        .pb-sm { padding-bottom: var(--space-sm); }
+        .pb-md { padding-bottom: var(--space-md); }
+        .pb-lg { padding-bottom: var(--space-lg); }
+        .pb-xl { padding-bottom: var(--space-xl); }
+
+        .bg-dark { background-color: var(--dark); }
+        .bg-primary { background-color: var(--primary); }
+        .bg-secondary { background-color: var(--secondary); }
+        .bg-light { background-color: var(--light); }
+        .bg-white { background-color: var(--white); }
+
+        .text-white { color: var(--white); }
+        .text-dark { color: var(--dark); }
+
+        /* Grid & Layout */
+        .grid {
+            display: grid;
+            gap: var(--space-md);
+        }
+
+        .grid-2 {
+            grid-template-columns: 1fr;
+        }
+
+        .grid-3 {
+            grid-template-columns: 1fr;
+        }
+
+        .grid-4 {
+            grid-template-columns: 1fr;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .gap-sm {
+            gap: var(--space-sm);
+        }
+
+        .gap-md {
+            gap: var(--space-md);
+        }
+
+        .gap-lg {
+            gap: var(--space-lg);
+        }
+
+        @media (min-width: 768px) {
+            .grid-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .grid-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .grid-4 {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
+        }
+
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: var(--navbar-height);
+            padding: 0 var(--space-sm);
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: var(--fs-xl);
+            font-weight: 700;
+            color: var(--dark);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            line-height: 1;
+            transition: color var(--transition-normal);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-toggle {
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: var(--space-3xs);
+            z-index: 2000;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: var(--dark);
+            margin: 6px 0;
+            transition: var(--transition-normal);
+        }
+
+        .nav-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+
+        .nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: right var(--transition-normal);
+            z-index: 1500;
+        }
+
+        .nav-menu.active {
+            right: 0;
+        }
+
+        .nav-menu a {
+            font-family: var(--font-display);
+            font-size: var(--fs-lg);
+            color: var(--dark);
+            margin: var(--space-xs) 0;
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            position: relative;
+            display: inline-block;
+            padding: var(--space-3xs) var(--space-xs);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary);
+            transition: width var(--transition-normal);
+        }
+
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            margin-top: var(--space-md);
+        }
+
+        @media (min-width: 1024px) {
+            .nav-toggle {
+                display: none;
+            }
+
+            .nav-menu {
+                position: static;
+                width: auto;
+                height: auto;
+                background-color: transparent;
+                flex-direction: row;
+                gap: var(--space-md);
+            }
+
+            .nav-menu a {
+                font-size: var(--fs-md);
+                margin: 0;
+            }
+
+            .nav-cta {
+                margin-top: 0;
+                margin-left: var(--space-md);
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            background-color: var(--dark);
+            margin-top: var(--navbar-height);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            padding: var(--space-lg) 0;
+        }
+
+        .hero-content h1 {
+            color: var(--white);
+            margin-bottom: var(--space-md);
+            position: relative;
+        }
+
+        .hero-content h1::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 100px;
+            height: 5px;
+            background-color: var(--primary);
+        }
+
+        .hero-content p {
+            font-size: var(--fs-lg);
+            color: var(--gray-200);
+            margin-bottom: var(--space-lg);
+            max-width: 600px;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: var(--section-padding);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+            position: relative;
+        }
+
+        .section-title h2 {
+            display: inline-block;
+            margin-bottom: var(--space-xs);
+            position: relative;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+        }
+
+        .section-title p {
+            font-size: var(--fs-lg);
+            color: var(--gray-500);
+            max-width: 700px;
+            margin: var(--space-sm) auto;
+        }
+
+        /* About Section */
+        .about-img {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: var(--space-md);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            transition: transform var(--transition-normal);
+        }
+
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-experience {
+            position: absolute;
+            bottom: var(--space-md);
+            left: var(--space-md);
+            background-color: var(--primary);
+            padding: var(--space-sm);
+            color: var(--dark);
+            font-weight: 700;
+            z-index: 10;
+            text-align: center;
+            min-width: 140px;
+        }
+
+        .about-experience span {
+            display: block;
+            font-size: var(--fs-display-sm);
+            line-height: 1;
+            font-family: var(--font-display);
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-md);
+        }
+
+        .about-feature-icon {
+            background-color: var(--primary);
+            color: var(--dark);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: var(--space-sm);
+            font-size: var(--fs-lg);
+            flex-shrink: 0;
+        }
+
+        .about-feature-content h4 {
+            font-size: var(--fs-lg);
+            margin-bottom: var(--space-2xs);
+        }
+
+        .about-content h2 {
+            text-align: left;
+            margin-bottom: var(--space-md);
+        }
+
+        .about-content h2::after {
+            left: 0;
+            transform: none;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--light);
+        }
+
+        .service-card {
+            background-color: var(--white);
+            padding: var(--space-md);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--gray-200);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background-color: var(--primary);
+            transition: height var(--transition-slow);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-card:hover::before {
+            height: 100%;
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--primary);
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--fs-xl);
+            margin-bottom: var(--space-md);
+            transition: transform var(--transition-normal);
+        }
+
+        .service-card:hover .service-icon {
+            transform: rotateY(180deg);
+        }
+
+        .service-card h3 {
+            font-size: var(--fs-lg);
+            margin-bottom: var(--space-sm);
+            position: relative;
+            padding-bottom: var(--space-xs);
+        }
+
+        .service-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .service-card p {
+            margin-bottom: var(--space-md);
+            color: var(--gray-600);
+        }
+
+        .service-card .btn {
+            margin-top: auto;
+        }
+
+        /* Projects Section */
+        .project-item {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: var(--space-md);
+        }
+
+        .project-img {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 16/9;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-normal);
+        }
+
+        .project-item:hover .project-img img {
+            transform: scale(1.1);
+        }
+
+        .project-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: var(--space-md);
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+            transition: opacity var(--transition-normal);
+        }
+
+        .project-title {
+            color: var(--white);
+            margin-bottom: var(--space-2xs);
+        }
+
+        .project-category {
+            color: var(--primary);
+            font-weight: 500;
+            font-size: var(--fs-sm);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+        }
+
+        .project-link {
+            position: absolute;
+            top: var(--space-md);
+            right: var(--space-md);
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--fs-lg);
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity var(--transition-normal), transform var(--transition-normal);
+        }
+
+        .project-item:hover .project-link {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stats Section */
+        .stats {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: var(--space-xl) 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            margin-bottom: var(--space-md);
+        }
+
+        .stat-icon {
+            font-size: var(--fs-display-sm);
+            color: var(--primary);
+            margin-bottom: var(--space-sm);
+        }
+
+        .stat-number {
+            font-size: var(--fs-display-sm);
+            font-weight: 900;
+            color: var(--white);
+            font-family: var(--font-display);
+            margin-bottom: var(--space-2xs);
+            line-height: 1;
+        }
+
+        .stat-text {
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            font-size: var(--fs-sm);
+            color: var(--gray-300);
+        }
+
+        /* Why Choose Us */
+        .why-choose-us {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-choose-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        .why-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .why-item {
+            background-color: var(--white);
+            padding: var(--space-md);
+            margin-bottom: var(--space-md);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            border: 1px solid var(--gray-200);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: var(--primary);
+            transition: width var(--transition-normal);
+        }
+
+        .why-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .why-item:hover::after {
+            width: 100%;
+        }
+
+        .why-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: var(--space-sm);
+        }
+
+        .why-item h4 {
+            margin-bottom: var(--space-xs);
+            font-size: var(--fs-lg);
+        }
+
+        .why-item p {
+            color: var(--gray-600);
+            margin-bottom: 0;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--light);
+        }
+
+        .testimonial-item {
+            background-color: var(--white);
+            padding: var(--space-md);
+            margin-bottom: var(--space-md);
+            position: relative;
+            border: 1px solid var(--gray-200);
+        }
+
+        .testimonial-item::before {
+            content: '"';
+            font-size: 120px;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            color: var(--primary);
+            opacity: 0.2;
+            font-family: var(--font-display);
+            line-height: 1;
+        }
+
+        .testimonial-content {
+            position: relative;
+            z-index: 10;
+            margin-bottom: var(--space-md);
+            font-style: italic;
+            color: var(--gray-600);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: var(--space-sm);
+        }
+
+        .testimonial-author-info h5 {
+            margin-bottom: 0;
+            font-size: var(--fs-md);
+        }
+
+        .testimonial-author-info span {
+            color: var(--gray-500);
+            font-size: var(--fs-sm);
+        }
+
+        /* CTA Section */
+        .cta {
+            background-color: var(--primary);
+            color: var(--dark);
+            padding: var(--space-xl) 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: var(--dark);
+            margin-bottom: var(--space-md);
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto var(--space-lg);
+            font-size: var(--fs-lg);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark);
+            color: var(--gray-300);
+            padding-top: var(--space-xl);
+        }
+
+        .footer h4 {
+            color: var(--white);
+            margin-bottom: var(--space-md);
+            padding-bottom: var(--space-xs);
+            position: relative;
+        }
+
+        .footer h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .footer p {
+            margin-bottom: var(--space-md);
+        }
+
+        .footer-about {
+            margin-bottom: var(--space-lg);
+        }
+
+        .footer-links {
+            margin-bottom: var(--space-lg);
+        }
+
+        .footer-links ul li {
+            margin-bottom: var(--space-xs);
+        }
+
+        .footer-links ul li a {
+            color: var(--gray-300);
+            transition: color var(--transition-normal), padding-left var(--transition-normal);
+            display: block;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--primary);
+            padding-left: var(--space-xs);
+        }
+
+        .footer-links ul li a i {
+            margin-right: var(--space-2xs);
+            color: var(--primary);
+        }
+
+        .footer-contact-item {
+            display: flex;
+            margin-bottom: var(--space-sm);
+        }
+
+        .footer-contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: var(--space-sm);
+            flex-shrink: 0;
+        }
+
+        .footer-contact-text h5 {
+            color: var(--white);
+            margin-bottom: 0;
+            font-size: var(--fs-md);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: var(--space-xs);
+            margin-top: var(--space-md);
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color var(--transition-normal), color var(--transition-normal);
+        }
+
+        .footer-social a:hover {
+            background-color: var(--primary);
+            color: var(--dark);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: var(--space-md) 0;
+            margin-top: var(--space-xl);
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 0;
+        }
+
+        /* Responsive Media Queries */
+        @media (min-width: 768px) {
+            .hero-content h1 {
+                font-size: var(--fs-display-xl);
+            }
+
+            .about-img {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .section-title {
+                margin-bottom: var(--space-2xl);
+            }
+
+            .footer-about,
+            .footer-links {
+                margin-bottom: 0;
+            }
+        }
+    
+    </style>
+<style>
+  /* Industry-specific color scheme for General Business */
+  :root {
+    /* Override ALL color variables with industry-specific colors */
+    --primary-color: #2563eb !important;
+    --primary-light: #1d4ed8 !important;
+    --primary-dark: #1e40af !important;
+    
+    --secondary-color: #64748b !important;
+    --secondary-light: #475569 !important;
+    --secondary-dark: #334155 !important;
+    
+    --accent-color: #059669 !important;
+    --accent-light: #047857 !important;
+    --accent-dark: #065f46 !important;
+    
+    /* Override common template color variables */
+    --primary: #2563eb !important;
+    --secondary: #64748b !important;
+    --accent: #059669 !important;
+    --dark: #1A1A1A !important;
+    --light: #FFFFFF !important;
+    --gray: #6C6C6C !important;
+    
+    /* Override gradient */
+    --gradient: linear-gradient(135deg, #2563eb 0%, #1e40af 100%) !important;
+    
+    /* Common color mappings */
+    --brand-primary: #2563eb !important;
+    --brand-secondary: #64748b !important;
+    --color-primary: #2563eb !important;
+    --color-secondary: #64748b !important;
+    --theme-primary: #2563eb !important;
+    --theme-secondary: #64748b !important;
+  }
+  
+  /* Apply colors to common Bootstrap and template patterns */
+  .btn-primary,
+  .primary-button,
+  button.primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+  }
+  
+  .btn-primary:hover,
+  .primary-button:hover,
+  button.primary:hover {
+    background-color: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+  }
+  
+  .text-primary {
+    color: var(--primary-color) !important;
+  }
+  
+  .bg-primary {
+    background-color: var(--primary-color) !important;
+  }
+  
+  .border-primary {
+    border-color: var(--primary-color) !important;
+  }
+  
+  /* Links */
+  a {
+    color: var(--primary-color);
+  }
+  
+  a:hover {
+    color: var(--primary-dark);
+  }
+  
+  /* Hero sections */
+  .hero,
+  .hero-section,
+  .jumbotron {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%) !important;
+  }
+  
+  /* Navigation */
+  .navbar-brand {
+    color: var(--primary-color) !important;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--primary-color) !important;
+  }
+  
+  /* Forms */
+  .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color), 0.25);
+  }
+  
+  /* Cards and sections */
+  .card-header {
+    background-color: var(--primary-light);
+    color: white;
+  }
+  
+  /* Industry-specific adjustments */
+  
+  
+  
+  
+  
+  
+  /* Aggressive overrides for templates with hardcoded colors */
+  /* Target specific color values that templates might use */
+  [style*="#FF6B35"] { color: #2563eb !important; }
+  [style*="#F7931E"] { color: #64748b !important; }
+  [style*="#FFD23F"] { color: #059669 !important; }
+  
+  /* Override inline styles and hardcoded backgrounds */
+  .hero[style*="background"] {
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%) !important;
+  }
+  
+  /* Force color changes on elements that might have inline styles */
+  .text-primary,
+  [class*="text-primary"],
+  [class*="color-primary"] {
+    color: #2563eb !important;
+  }
+  
+  .bg-primary,
+  [class*="bg-primary"],
+  [class*="background-primary"] {
+    background-color: #2563eb !important;
+  }
+  
+  /* Override gradient classes */
+  .text-gradient,
+  [class*="gradient"] {
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+  }
+  
+  /* Ensure buttons use new colors */
+  button,
+  .btn,
+  [type="button"],
+  [type="submit"] {
+    transition: all 0.3s ease;
+  }
+  
+  button:not(.btn-secondary):not(.btn-light):not(.btn-dark),
+  .btn:not(.btn-secondary):not(.btn-light):not(.btn-dark) {
+    background-color: #2563eb !important;
+    border-color: #2563eb !important;
+  }
+  
+  button:not(.btn-secondary):not(.btn-light):not(.btn-dark):hover,
+  .btn:not(.btn-secondary):not(.btn-light):not(.btn-dark):hover {
+    background-color: #1e40af !important;
+    border-color: #1e40af !important;
+  }
+</style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">BUILD<span>RIGHT</span></a>
+                <button class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="builds and renovations.html">builds and renovations</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li class="nav-cta"><a href="contact.html" class="btn btn-primary">GET A QUOTE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg" style="background-image: url('images/hero-bg.jpg');"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>BUILDING <span class="text-primary">EXCELLENCE</span><br>WITH STRENGTH</h1>
+                <p>With over 25 Trusted construction expertise in Not specified, BuildRight Construction delivers exceptional results in residential, commercial, and industrial construction builds and renovations. We build foundations for success.</p>
+                <div class="btn-group">
+                    <a href="services.html" class="btn btn-primary">our construction and renovation expertise</a>
+                    <a href="builds and renovations.html" class="btn btn-outline">VIEW builds and renovations</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about">
+        <div class="container">
+            <div class="grid grid-2 items-center">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600&q=80" alt="About BuildRight Construction">
+                    <div class="about-experience">
+                        <span>25+</span> Years Experience
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h2>WE BUILD WITH EXCELLENCE AND INTEGRITY</h2>
+                    <p>Founded in 1998, BuildRight Construction has established itself as a leader in the construction industry. We specialize in delivering high-quality construction services for residential, commercial, and industrial builds and renovations.</p>
+                    <p>Our experienced team combines technical expertise with innovative construction builds and renovations and renovations to tackle complex construction challenges. We prioritize safety, quality, and client satisfaction on every project.</p>
+                    
+                    <div class="grid grid-2 mt-lg">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="bi bi-check-circle"></i>
+                            </div>
+                            <div class="about-feature-content">
+                                <h4>QUALITY ASSURANCE</h4>
+                                <p>We maintain rigorous quality standards throughout every phase of construction.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <div class="about-feature-content">
+                                <h4>skilled contractors and craftsmen</h4>
+                                <p>Our skilled professionals bring Trusted construction expertise in Not specified to every project.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="about.html" class="btn btn-primary mt-md">LEARN MORE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services">
+        <div class="container">
+            <div class="section-title">
+                <h2>OUR CONSTRUCTION SERVICES</h2>
+                <p>Expert construction builds and renovations and renovations for your construction needs</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-house"></i>
+                    </div>
+                    <h3>RESIDENTIAL CONSTRUCTION</h3>
+                    <p>From custom homes to renovations, we deliver exceptional residential construction services tailored to your specific needs and preferences.</p>
+                    <a href="services.html" class="btn btn-outline">LEARN MORE</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+                    <h3>COMMERCIAL CONSTRUCTION</h3>
+                    <p>We design and build commercial spaces that combine functionality, efficiency, and aesthetic appeal for businesses of all sizes.</p>
+                    <a href="services.html" class="btn btn-outline">LEARN MORE</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-gear"></i>
+                    </div>
+                    <h3>INDUSTRIAL CONSTRUCTION</h3>
+                    <p>Our industrial construction services cover manufacturing facilities, warehouses, and specialized industrial infrastructure builds and renovations.</p>
+                    <a href="services.html" class="btn btn-outline">LEARN MORE</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-tools"></i>
+                    </div>
+                    <h3>RENOVATION & REMODELING</h3>
+                    <p>Transform your existing spaces with our comprehensive renovation and remodeling services for both residential and commercial properties.</p>
+                    <a href="services.html" class="btn btn-outline">LEARN MORE</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-clipboard-check"></i>
+                    </div>
+                    <h3>PROJECT MANAGEMENT</h3>
+                    <p>Our expert project management team ensures your construction project is completed on time, within budget, and to the highest quality standards.</p>
+                    <a href="services.html" class="btn btn-outline">LEARN MORE</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-rulers"></i>
+                    </div>
+                    <h3>DESIGN-BUILD SERVICES</h3>
+                    <p>Our integrated design-build approach streamlines the construction process by combining design and construction services under one roof.</p>
+                    <a href="services.html" class="btn btn-outline">LEARN MORE</a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-lg">
+                <a href="services.html" class="btn btn-primary">VIEW ALL SERVICES</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- builds and renovations Section -->
+    <section class="section builds and renovations">
+        <div class="container">
+            <div class="section-title">
+                <h2>OUR RECENT builds and renovations</h2>
+                <p>Showcasing our expertise and commitment to excellence</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="project-item">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Luxury Residential Complex">
+                    </div>
+                    <div class="project-overlay">
+                        <h3 class="project-title">LUXURY RESIDENTIAL COMPLEX</h3>
+                        <p class="project-category">RESIDENTIAL CONSTRUCTION</p>
+                    </div>
+                    <a href="builds and renovations.html" class="project-link">
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Modern Office Building">
+                    </div>
+                    <div class="project-overlay">
+                        <h3 class="project-title">MODERN OFFICE BUILDING</h3>
+                        <p class="project-category">COMMERCIAL CONSTRUCTION</p>
+                    </div>
+                    <a href="builds and renovations.html" class="project-link">
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1493421419110-74f4e85ba126?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Manufacturing Facility">
+                    </div>
+                    <div class="project-overlay">
+                        <h3 class="project-title">MANUFACTURING FACILITY</h3>
+                        <p class="project-category">INDUSTRIAL CONSTRUCTION</p>
+                    </div>
+                    <a href="builds and renovations.html" class="project-link">
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1542744173-8659b8e77b29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Historic Building Renovation">
+                    </div>
+                    <div class="project-overlay">
+                        <h3 class="project-title">HISTORIC BUILDING RENOVATION</h3>
+                        <p class="project-category">RENOVATION & REMODELING</p>
+                    </div>
+                    <a href="builds and renovations.html" class="project-link">
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Shopping Mall Complex">
+                    </div>
+                    <div class="project-overlay">
+                        <h3 class="project-title">SHOPPING MALL COMPLEX</h3>
+                        <p class="project-category">COMMERCIAL CONSTRUCTION</p>
+                    </div>
+                    <a href="builds and renovations.html" class="project-link">
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Luxury Custom Home">
+                    </div>
+                    <div class="project-overlay">
+                        <h3 class="project-title">LUXURY CUSTOM HOME</h3>
+                        <p class="project-category">RESIDENTIAL CONSTRUCTION</p>
+                    </div>
+                    <a href="builds and renovations.html" class="project-link">
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-lg">
+                <a href="builds and renovations.html" class="btn btn-primary">VIEW ALL builds and renovations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="grid grid-4">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="stat-number">500+</div>
+                    <div class="stat-text">builds and renovations COMPLETED</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <div class="stat-number">120+</div>
+                    <div class="stat-text">SKILLED PROFESSIONALS</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="bi bi-trophy"></i>
+                    </div>
+                    <div class="stat-number">25+</div>
+                    <div class="stat-text">Trusted construction expertise in Not specified</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="bi bi-emoji-smile"></i>
+                    </div>
+                    <div class="stat-number">450+</div>
+                    <div class="stat-text">HAPPY property owners and developers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section why-choose-us">
+        <div class="why-choose-bg" style="background-image: url('images/why-choose-bg.jpg');"></div>
+        <div class="container why-content">
+            <div class="section-title">
+                <h2>WHY CHOOSE BUILDRIGHT</h2>
+                <p>The qualities that set us apart</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="why-item">
+                    <div class="why-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h4>QUALITY ASSURANCE</h4>
+                    <p>We're committed to delivering the highest quality construction that stands the test of time. Our strict quality control processes ensure excellence at every stage.</p>
+                </div>
+                
+                <div class="why-item">
+                    <div class="why-icon">
+                        <i class="bi bi-clock-history"></i>
+                    </div>
+                    <h4>ON-TIME DELIVERY</h4>
+                    <p>We understand the importance of timelines in construction builds and renovations. Our efficient project management ensures we deliver on schedule without compromising quality.</p>
+                </div>
+                
+                <div class="why-item">
+                    <div class="why-icon">
+                        <i class="bi bi-wallet2"></i>
+                    </div>
+                    <h4>COST-EFFECTIVE construction builds and renovations and renovations</h4>
+                    <p>We offer competitive pricing and work diligently to stay within budget constraints while maintaining high standards of craftsmanship and materials.</p>
+                </div>
+                
+                <div class="why-item">
+                    <div class="why-icon">
+                        <i class="bi bi-person-check"></i>
+                    </div>
+                    <h4>EXPERIENCED TEAM</h4>
+                    <p>Our team of construction professionals brings decades of combined experience across all types of builds and renovations, ensuring expertise in every aspect of your build.</p>
+                </div>
+                
+                <div class="why-item">
+                    <div class="why-icon">
+                        <i class="bi bi-lightbulb"></i>
+                    </div>
+                    <h4>INNOVATIVE APPROACH</h4>
+                    <p>We stay at the forefront of construction technology and methodologies, implementing innovative construction builds and renovations and renovations that improve efficiency and results.</p>
+                </div>
+                
+                <div class="why-item">
+                    <div class="why-icon">
+                        <i class="bi bi-headset"></i>
+                    </div>
+                    <h4>EXCEPTIONAL SERVICE</h4>
+                    <p>Client satisfaction is our top priority. We maintain clear communication throughout your project and provide responsive, attentive service from start to finish.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>CLIENT TESTIMONIALS</h2>
+                <p>What our property owners and developers say about working with us</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"BuildRight Construction exceeded our expectations with our new office building. They delivered exceptional quality work on schedule and within our budget. Their attention to detail and professional approach made the entire process smooth and stress-free."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100&q=80" alt="Robert Johnson">
+                        <div class="testimonial-author-info">
+                            <h5>ROBERT JOHNSON</h5>
+                            <span>CEO, Johnson Enterprises</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"We hired BuildRight for our custom home construction and couldn't be happier with the results. Their team was professional, responsive, and truly cared about bringing our vision to life. The quality of craftsmanship is outstanding, and we love our new home."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100&q=80" alt="Sarah & Michael Williams">
+                        <div class="testimonial-author-info">
+                            <h5>SARAH & MICHAEL WILLIAMS</h5>
+                            <span>Homeowners</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"The renovation of our manufacturing facility was a complex project with strict operational requirements. BuildRight managed the entire process with expertise, ensuring minimal disruption to our operations while delivering exceptional results on time."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100&q=80" alt="David Thompson">
+                        <div class="testimonial-author-info">
+                            <h5>DAVID THOMPSON</h5>
+                            <span>Operations Director, Thompson Manufacturing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>READY TO START YOUR CONSTRUCTION PROJECT?</h2>
+            <p>Connect with Musicyhhjkh for exceptional construction services for a free project assessment and estimate. Our team is ready to bring your vision to life with quality construction services tailored to your needs.</p>
+            <a href="contact.html" class="btn btn-secondary">CONTACT US NOW</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4">
+                <div class="footer-about">
+                    <h4>ABOUT BUILDRIGHT</h4>
+                    <p>BuildRight Construction is a full-service construction company serving residential, commercial, and industrial property owners and developers. With 25+ Trusted construction expertise in Not specified, we deliver quality construction services with integrity and excellence.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+                        <li><a href="builds and renovations.html"><i class="bi bi-chevron-right"></i> builds and renovations</a></li>
+                        <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>our construction and renovation expertise</h4>
+                    <ul>
+                        <li><a href="services.html"><i class="bi bi-chevron-right"></i> Residential Construction</a></li>
+                        <li><a href="services.html"><i class="bi bi-chevron-right"></i> Commercial Construction</a></li>
+                        <li><a href="services.html"><i class="bi bi-chevron-right"></i> Industrial Construction</a></li>
+                        <li><a href="services.html"><i class="bi bi-chevron-right"></i> Renovation & Remodeling</a></li>
+                        <li><a href="services.html"><i class="bi bi-chevron-right"></i> Project Management</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>CONTACT INFORMATION</h4>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            <h5>Address</h5>
+                            <p>123 Construction Ave, Building City, STATE 12345</p>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            <h5>Phone</h5>
+                            <p>(123) 456-7890</p>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            <h5>Email</h5>
+                            <p>info@buildright.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 BuildRight Construction. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        navToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+    <!-- Universal Form Handler -->
+    <script>
+      window.FORM_HANDLER_CONFIG = {
+        apiEndpoint: 'https://genmysite.com/api/forms/submit',
+        websiteId: null,
+        recaptchaSiteKey: null,
+        debug: false
+      };
+    </script>
+    <script src="/js/form-handler.js" defer></script>
+</body>
+</html>
