@@ -3,1209 +3,2836 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Musicyhhjkh - Professional - HR/Recruiting</title>
+    <title>BuildRight Construction | Bold Industrial Construction Services</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Spectral:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <style>
         :root {
-            --primary: #2A63E2;
-            --secondary: #142C60;
-            --dark: #0A1E40;
-            --light: #F5F7FA;
-            --success: #20B15A;
-            --warning: #F5A623;
-            --danger: #E53935;
-            --gray: #6C757D;
-            --border: #E5E8ED;
+            /* Color Palette - Bold Industrial */
+            --primary: #ffb400;
+            --primary-dark: #e09900;
+            --secondary: #292929;
+            --secondary-light: #3d3d3d;
+            --dark: #111111;
+            --light: #f7f7f7;
+            --white: #ffffff;
+            --gray-100: #f5f5f5;
+            --gray-200: #e0e0e0;
+            --gray-300: #b0b0b0;
+            --gray-400: #888888;
+            --gray-500: #666666;
+            --gray-600: #444444;
+            --accent: #ff4a3c;
+
+            /* Typography */
+            --font-display: 'Bebas Neue', sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --fs-display-xl: clamp(3.5rem, 10vw, 6rem);
+            --fs-display-lg: clamp(2.5rem, 7vw, 4.5rem);
+            --fs-display-md: clamp(2rem, 5vw, 3.5rem);
+            --fs-display-sm: clamp(1.75rem, 3vw, 2.5rem);
+            --fs-xl: clamp(1.5rem, 2vw, 2rem);
+            --fs-lg: clamp(1.25rem, 1.5vw, 1.5rem);
+            --fs-md: 1.125rem;
+            --fs-base: 1rem;
+            --fs-sm: 0.875rem;
+            --fs-xs: 0.75rem;
+            --line-height-tight: 1.1;
+            --line-height-normal: 1.5;
+            --line-height-loose: 1.8;
+            --tracking-tight: -0.025em;
+            --tracking-normal: 0;
+            --tracking-wide: 0.05em;
+            --tracking-wider: 0.1em;
+
+            /* Spacing */
+            --space-3xs: clamp(0.25rem, 0.5vw, 0.375rem);
+            --space-2xs: clamp(0.5rem, 0.75vw, 0.75rem);
+            --space-xs: clamp(0.75rem, 1vw, 1rem);
+            --space-sm: clamp(1rem, 1.5vw, 1.5rem);
+            --space-md: clamp(1.5rem, 2.5vw, 2rem);
+            --space-lg: clamp(2rem, 3vw, 3rem);
+            --space-xl: clamp(3rem, 4vw, 4rem);
+            --space-2xl: clamp(4rem, 6vw, 6rem);
+            --space-3xl: clamp(6rem, 8vw, 8rem);
+            
+            /* Layout */
+            --container-max: 1440px;
+            --container-sm: 640px;
+            --container-md: 768px;
+            --container-lg: 1024px;
+            --container-xl: 1280px;
+            --navbar-height: 80px;
+            --section-padding: var(--space-2xl) 0;
+            
+            /* Effects */
+            --border-radius-sm: 4px;
+            --border-radius-md: 8px;
+            --border-radius-lg: 12px;
+            --border-radius-xl: 16px;
+            --border-width: 1px;
+            --border-width-thick: 3px;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
         }
-        
+
+        /* Reset & Base Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--navbar-height);
+        }
+
         body {
-            font-family: 'Poppins', sans-serif;
-            color: #404B63;
-            line-height: 1.7;
-            background-color: var(--light);
+            font-family: var(--font-body);
+            color: var(--secondary);
+            line-height: var(--line-height-normal);
+            background-color: var(--white);
+            overflow-x: hidden;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Spectral', serif;
-            font-weight: 600;
-            color: var(--dark);
-            line-height: 1.3;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
-        
+
         a {
             text-decoration: none;
-            color: var(--primary);
-            transition: all 0.3s ease;
-        }
-        
-        a:hover {
             color: var(--secondary);
+            transition: color var(--transition-normal);
         }
-        
-        .section-padding {
-            padding: 100px 0;
+
+        ul {
+            list-style: none;
         }
-        
+
+        .container {
+            width: 90%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 var(--space-sm);
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: var(--line-height-tight);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            color: var(--dark);
+            margin-bottom: var(--space-sm);
+        }
+
+        h1 {
+            font-size: var(--fs-display-xl);
+            letter-spacing: var(--tracking-tight);
+        }
+
+        h2 {
+            font-size: var(--fs-display-md);
+        }
+
+        h3 {
+            font-size: var(--fs-display-sm);
+        }
+
+        p {
+            margin-bottom: var(--space-md);
+        }
+
         .text-primary {
-            color: var(--primary) !important;
+            color: var(--primary);
         }
-        
-        .bg-primary {
-            background-color: var(--primary) !important;
+
+        .text-center {
+            text-align: center;
         }
-        
-        .text-secondary {
-            color: var(--secondary) !important;
+
+        .text-uppercase {
+            text-transform: uppercase;
         }
-        
-        .bg-secondary {
-            background-color: var(--secondary) !important;
+
+        .font-bold {
+            font-weight: 700;
         }
-        
-        .bg-light {
-            background-color: var(--light) !important;
-        }
-        
-        .bg-dark {
-            background-color: var(--dark) !important;
-        }
-        
+
         /* Buttons */
         .btn {
-            padding: 12px 28px;
-            font-weight: 500;
-            border-radius: 4px;
-            transition: all 0.3s ease;
+            display: inline-block;
+            font-family: var(--font-display);
+            font-size: var(--fs-md);
+            padding: var(--space-xs) var(--space-md);
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            font-weight: 700;
+            transition: all var(--transition-normal);
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            min-width: 180px;
         }
-        
+
         .btn-primary {
             background-color: var(--primary);
-            border-color: var(--primary);
-            color: white;
+            color: var(--dark);
         }
-        
+
         .btn-primary:hover {
-            background-color: var(--secondary);
-            border-color: var(--secondary);
+            background-color: var(--primary-dark);
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(42, 99, 226, 0.2);
+            box-shadow: var(--shadow-md);
         }
-        
-        .btn-outline-primary {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-        
-        .btn-outline-primary:hover {
-            background-color: var(--primary);
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(42, 99, 226, 0.2);
-        }
-        
+
         .btn-secondary {
             background-color: var(--secondary);
-            border-color: var(--secondary);
-            color: white;
+            color: var(--white);
         }
-        
+
         .btn-secondary:hover {
-            background-color: var(--dark);
-            border-color: var(--dark);
+            background-color: var(--secondary-light);
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(20, 44, 96, 0.2);
+            box-shadow: var(--shadow-md);
         }
-        
-        /* Navbar */
-        .navbar {
-            padding: 20px 0;
-            transition: all 0.3s ease;
-        }
-        
-        .navbar.scrolled {
-            padding: 15px 0;
-            background-color: white;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        }
-        
-        .navbar-brand {
-            font-family: 'Spectral', serif;
-            font-weight: 700;
-            font-size: 26px;
+
+        .btn-outline {
+            border: var(--border-width-thick) solid var(--primary);
             color: var(--dark);
+            background-color: transparent;
         }
-        
-        .navbar-brand span {
-            color: var(--primary);
-        }
-        
-        .navbar-nav .nav-link {
-            font-weight: 500;
-            color: var(--dark);
-            padding: 10px 16px;
-            position: relative;
-        }
-        
-        .navbar-nav .nav-link.active,
-        .navbar-nav .nav-link:hover {
-            color: var(--primary);
-        }
-        
-        .navbar-nav .nav-link.active::after,
-        .navbar-nav .nav-link:hover::after {
-            content: '';
-            position: absolute;
-            width: 30px;
-            height: 2px;
+
+        .btn-outline:hover {
             background-color: var(--primary);
-            bottom: 5px;
-            left: 16px;
-            transition: width 0.3s ease;
+            color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
         }
-        
-        /* Hero Section */
-        .hero {
-            padding: 180px 0 100px;
-            background-color: var(--light);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, rgba(42, 99, 226, 0.1), rgba(42, 99, 226, 0.05));
-            top: -100px;
-            right: -200px;
-            z-index: 0;
-        }
-        
-        .hero::after {
-            content: '';
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, rgba(20, 44, 96, 0.1), rgba(20, 44, 96, 0.05));
-            bottom: -150px;
-            left: -150px;
-            z-index: 0;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        
-        .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            max-width: 600px;
-        }
-        
-        .hero-image {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .hero-image img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            transition: all 0.5s ease;
-        }
-        
-        .hero-image img:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.15);
-        }
-        
-        .hero-stats {
-            margin-top: 30px;
+
+        .btn-group {
             display: flex;
             flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
         }
-        
-        .stat-item {
-            margin-right: 40px;
-            margin-bottom: 20px;
+
+        /* Utilities */
+        .mt-0 { margin-top: 0; }
+        .mt-sm { margin-top: var(--space-sm); }
+        .mt-md { margin-top: var(--space-md); }
+        .mt-lg { margin-top: var(--space-lg); }
+        .mt-xl { margin-top: var(--space-xl); }
+
+        .mb-0 { margin-bottom: 0; }
+        .mb-sm { margin-bottom: var(--space-sm); }
+        .mb-md { margin-bottom: var(--space-md); }
+        .mb-lg { margin-bottom: var(--space-lg); }
+        .mb-xl { margin-bottom: var(--space-xl); }
+
+        .pt-0 { padding-top: 0; }
+        .pt-sm { padding-top: var(--space-sm); }
+        .pt-md { padding-top: var(--space-md); }
+        .pt-lg { padding-top: var(--space-lg); }
+        .pt-xl { padding-top: var(--space-xl); }
+
+        .pb-0 { padding-bottom: 0; }
+        .pb-sm { padding-bottom: var(--space-sm); }
+        .pb-md { padding-bottom: var(--space-md); }
+        .pb-lg { padding-bottom: var(--space-lg); }
+        .pb-xl { padding-bottom: var(--space-xl); }
+
+        .bg-dark { background-color: var(--dark); }
+        .bg-primary { background-color: var(--primary); }
+        .bg-secondary { background-color: var(--secondary); }
+        .bg-light { background-color: var(--light); }
+        .bg-white { background-color: var(--white); }
+
+        .text-white { color: var(--white); }
+        .text-dark { color: var(--dark); }
+
+        /* Grid & Layout */
+        .grid {
+            display: grid;
+            gap: var(--space-md);
         }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            line-height: 1.2;
-            margin-bottom: 5px;
+
+        .grid-2 {
+            grid-template-columns: 1fr;
         }
-        
-        .stat-text {
-            font-size: 1rem;
-            color: var(--dark);
+
+        .grid-3 {
+            grid-template-columns: 1fr;
         }
-        
-        /* About Section */
-        .about {
-            padding: 100px 0;
-            position: relative;
+
+        .grid-4 {
+            grid-template-columns: 1fr;
         }
-        
-        .about-image {
-            position: relative;
+
+        .flex {
+            display: flex;
         }
-        
-        .about-image img {
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .gap-sm {
+            gap: var(--space-sm);
+        }
+
+        .gap-md {
+            gap: var(--space-md);
+        }
+
+        .gap-lg {
+            gap: var(--space-lg);
+        }
+
+        @media (min-width: 768px) {
+            .grid-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .grid-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .grid-4 {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
         }
-        
-        .about-image::before {
+
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: var(--navbar-height);
+            padding: 0 var(--space-sm);
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: var(--fs-xl);
+            font-weight: 700;
+            color: var(--dark);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            line-height: 1;
+            transition: color var(--transition-normal);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-toggle {
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: var(--space-3xs);
+            z-index: 2000;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: var(--dark);
+            margin: 6px 0;
+            transition: var(--transition-normal);
+        }
+
+        .nav-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+
+        .nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: right var(--transition-normal);
+            z-index: 1500;
+        }
+
+        .nav-menu.active {
+            right: 0;
+        }
+
+        .nav-menu a {
+            font-family: var(--font-display);
+            font-size: var(--fs-lg);
+            color: var(--dark);
+            margin: var(--space-xs) 0;
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            position: relative;
+            display: inline-block;
+            padding: var(--space-3xs) var(--space-xs);
+        }
+
+        .nav-menu a::after {
             content: '';
             position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary);
+            transition: width var(--transition-normal);
+        }
+
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            margin-top: var(--space-md);
+        }
+
+        @media (min-width: 1024px) {
+            .nav-toggle {
+                display: none;
+            }
+
+            .nav-menu {
+                position: static;
+                width: auto;
+                height: auto;
+                background-color: transparent;
+                flex-direction: row;
+                gap: var(--space-md);
+            }
+
+            .nav-menu a {
+                font-size: var(--fs-md);
+                margin: 0;
+            }
+
+            .nav-cta {
+                margin-top: 0;
+                margin-left: var(--space-md);
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            background-color: var(--dark);
+            margin-top: var(--navbar-height);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            border: 2px solid var(--primary);
-            border-radius: 10px;
-            top: 20px;
-            left: -20px;
-            z-index: -1;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+            z-index: 1;
         }
-        
-        .section-title {
-            margin-bottom: 40px;
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            padding: var(--space-lg) 0;
         }
-        
-        .section-title h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
+
+        .hero-content h1 {
+            color: var(--white);
+            margin-bottom: var(--space-md);
             position: relative;
         }
-        
+
+        .hero-content h1::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 100px;
+            height: 5px;
+            background-color: var(--primary);
+        }
+
+        .hero-content p {
+            font-size: var(--fs-lg);
+            color: var(--gray-200);
+            margin-bottom: var(--space-lg);
+            max-width: 600px;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: var(--section-padding);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+            position: relative;
+        }
+
+        .section-title h2 {
+            display: inline-block;
+            margin-bottom: var(--space-xs);
+            position: relative;
+        }
+
         .section-title h2::after {
             content: '';
-            width: 70px;
-            height: 3px;
-            background-color: var(--primary);
             position: absolute;
             bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+        }
+
+        .section-title p {
+            font-size: var(--fs-lg);
+            color: var(--gray-500);
+            max-width: 700px;
+            margin: var(--space-sm) auto;
+        }
+
+        /* About Section */
+        .about-img {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: var(--space-md);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            transition: transform var(--transition-normal);
+        }
+
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-experience {
+            position: absolute;
+            bottom: var(--space-md);
+            left: var(--space-md);
+            background-color: var(--primary);
+            padding: var(--space-sm);
+            color: var(--dark);
+            font-weight: 700;
+            z-index: 10;
+            text-align: center;
+            min-width: 140px;
+        }
+
+        .about-experience span {
+            display: block;
+            font-size: var(--fs-display-sm);
+            line-height: 1;
+            font-family: var(--font-display);
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-md);
+        }
+
+        .about-feature-icon {
+            background-color: var(--primary);
+            color: var(--dark);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: var(--space-sm);
+            font-size: var(--fs-lg);
+            flex-shrink: 0;
+        }
+
+        .about-feature-content h4 {
+            font-size: var(--fs-lg);
+            margin-bottom: var(--space-2xs);
+        }
+
+        .about-content h2 {
+            text-align: left;
+            margin-bottom: var(--space-md);
+        }
+
+        .about-content h2::after {
             left: 0;
+            transform: none;
         }
-        
-        .about-content p {
-            margin-bottom: 30px;
-        }
-        
+
         /* Services Section */
         .services {
-            padding: 100px 0;
-            background-color: white;
+            background-color: var(--light);
         }
-        
+
         .service-card {
-            padding: 40px 30px;
-            border-radius: 10px;
-            background-color: white;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            margin-bottom: 30px;
-            border-bottom: 3px solid transparent;
+            background-color: var(--white);
+            padding: var(--space-md);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--gray-200);
         }
-        
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background-color: var(--primary);
+            transition: height var(--transition-slow);
+        }
+
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            border-bottom: 3px solid var(--primary);
+            box-shadow: var(--shadow-lg);
         }
-        
+
+        .service-card:hover::before {
+            height: 100%;
+        }
+
         .service-icon {
             width: 70px;
             height: 70px;
-            border-radius: 50%;
-            background-color: rgba(42, 99, 226, 0.1);
-            color: var(--primary);
+            background-color: var(--primary);
+            color: var(--dark);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
-            font-size: 30px;
-            transition: all 0.3s ease;
+            font-size: var(--fs-xl);
+            margin-bottom: var(--space-md);
+            transition: transform var(--transition-normal);
         }
-        
+
         .service-card:hover .service-icon {
-            background-color: var(--primary);
-            color: white;
+            transform: rotateY(180deg);
         }
-        
+
         .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-        
-        .service-card p {
-            margin-bottom: 20px;
-        }
-        
-        /* Process Section */
-        .process {
-            padding: 100px 0;
-            background-color: var(--light);
-        }
-        
-        .process-step {
-            padding: 40px 30px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            font-size: var(--fs-lg);
+            margin-bottom: var(--space-sm);
             position: relative;
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
+            padding-bottom: var(--space-xs);
         }
-        
-        .process-step:hover {
+
+        .service-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .service-card p {
+            margin-bottom: var(--space-md);
+            color: var(--gray-600);
+        }
+
+        .service-card .btn {
+            margin-top: auto;
+        }
+
+        /* builds and renovations Section */
+        .project-item {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: var(--space-md);
+        }
+
+        .project-img {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 16/9;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-normal);
+        }
+
+        .project-item:hover .project-img img {
+            transform: scale(1.1);
+        }
+
+        .project-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: var(--space-md);
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+            transition: opacity var(--transition-normal);
+        }
+
+        .project-title {
+            color: var(--white);
+            margin-bottom: var(--space-2xs);
+        }
+
+        .project-category {
+            color: var(--primary);
+            font-weight: 500;
+            font-size: var(--fs-sm);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+        }
+
+        .project-link {
+            position: absolute;
+            top: var(--space-md);
+            right: var(--space-md);
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--fs-lg);
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity var(--transition-normal), transform var(--transition-normal);
+        }
+
+        .project-item:hover .project-link {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stats Section */
+        .stats {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: var(--space-xl) 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            margin-bottom: var(--space-md);
+        }
+
+        .stat-icon {
+            font-size: var(--fs-display-sm);
+            color: var(--primary);
+            margin-bottom: var(--space-sm);
+        }
+
+        .stat-number {
+            font-size: var(--fs-display-sm);
+            font-weight: 900;
+            color: var(--white);
+            font-family: var(--font-display);
+            margin-bottom: var(--space-2xs);
+            line-height: 1;
+        }
+
+        .stat-text {
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            font-size: var(--fs-sm);
+            color: var(--gray-300);
+        }
+
+        /* Why Choose Us */
+        .why-choose-us {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-choose-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        .why-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .why-item {
+            background-color: var(--white);
+            padding: var(--space-md);
+            margin-bottom: var(--space-md);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            border: 1px solid var(--gray-200);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: var(--primary);
+            transition: width var(--transition-normal);
+        }
+
+        .why-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow-lg);
         }
-        
-        .step-number {
+
+        .why-item:hover::after {
+            width: 100%;
+        }
+
+        .why-icon {
             width: 60px;
             height: 60px;
-            border-radius: 50%;
             background-color: var(--primary);
-            color: white;
+            color: var(--dark);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 24px;
-            font-weight: 700;
+            margin-bottom: var(--space-sm);
+        }
+
+        .why-item h4 {
+            margin-bottom: var(--space-xs);
+            font-size: var(--fs-lg);
+        }
+
+        .why-item p {
+            color: var(--gray-600);
+            margin-bottom: 0;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--light);
+        }
+
+        .testimonial-item {
+            background-color: var(--white);
+            padding: var(--space-md);
+            margin-bottom: var(--space-md);
+            position: relative;
+            border: 1px solid var(--gray-200);
+        }
+
+        .testimonial-item::before {
+            content: '"';
+            font-size: 120px;
             position: absolute;
             top: -20px;
-            left: 30px;
-        }
-        
-        .process-step h3 {
-            font-size: 1.5rem;
-            margin-top: 20px;
-            margin-bottom: 15px;
-        }
-        
-        .process-step p {
-            margin-bottom: 0;
-        }
-        
-        /* Why Choose Us Section */
-        .why-choose-us {
-            padding: 100px 0;
-            background-color: white;
-        }
-        
-        .feature-item {
-            margin-bottom: 30px;
-        }
-        
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 10px;
-            background-color: rgba(42, 99, 226, 0.1);
+            left: 20px;
             color: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
+            opacity: 0.2;
+            font-family: var(--font-display);
+            line-height: 1;
         }
-        
-        .feature-item:hover .feature-icon {
-            background-color: var(--primary);
-            color: white;
-            transform: translateY(-5px);
-        }
-        
-        .feature-item h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-        
-        .feature-item p {
-            margin-bottom: 0;
-        }
-        
-        /* Testimonials Section */
-        .testimonials {
-            padding: 100px 0;
-            background-color: var(--light);
-        }
-        
-        .testimonial-card {
-            padding: 40px 30px;
-            border-radius: 10px;
-            background-color: white;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
+
+        .testimonial-content {
             position: relative;
-        }
-        
-        .testimonial-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        .quote-icon {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: rgba(42, 99, 226, 0.1);
-            font-size: 60px;
-        }
-        
-        .testimonial-text {
+            z-index: 10;
+            margin-bottom: var(--space-md);
             font-style: italic;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
+            color: var(--gray-600);
         }
-        
+
         .testimonial-author {
             display: flex;
             align-items: center;
         }
-        
+
         .testimonial-author img {
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            margin-right: 15px;
             object-fit: cover;
+            margin-right: var(--space-sm);
         }
-        
-        .author-info h4 {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-        
-        .author-info p {
-            font-size: 0.9rem;
+
+        .testimonial-author-info h5 {
             margin-bottom: 0;
-            color: var(--gray);
+            font-size: var(--fs-md);
         }
-        
+
+        .testimonial-author-info span {
+            color: var(--gray-500);
+            font-size: var(--fs-sm);
+        }
+
         /* CTA Section */
         .cta {
-            padding: 80px 0;
             background-color: var(--primary);
-            color: white;
+            color: var(--dark);
+            padding: var(--space-xl) 0;
             text-align: center;
         }
-        
+
         .cta h2 {
-            font-size: 2.5rem;
-            color: white;
-            margin-bottom: 20px;
+            color: var(--dark);
+            margin-bottom: var(--space-md);
         }
-        
+
         .cta p {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
             max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto var(--space-lg);
+            font-size: var(--fs-lg);
         }
-        
-        .btn-light {
-            background-color: white;
-            color: var(--primary);
-            font-weight: 500;
-        }
-        
-        .btn-light:hover {
-            background-color: var(--light);
-            color: var(--primary);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
-        }
-        
+
         /* Footer */
         .footer {
-            padding: 80px 0 30px;
             background-color: var(--dark);
-            color: rgba(255, 255, 255, 0.7);
+            color: var(--gray-300);
+            padding-top: var(--space-xl);
         }
-        
+
         .footer h4 {
-            color: white;
-            font-size: 1.3rem;
-            margin-bottom: 25px;
+            color: var(--white);
+            margin-bottom: var(--space-md);
+            padding-bottom: var(--space-xs);
             position: relative;
         }
-        
+
         .footer h4::after {
             content: '';
             position: absolute;
-            width: 40px;
-            height: 2px;
-            background-color: var(--primary);
-            bottom: -10px;
+            bottom: 0;
             left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary);
         }
-        
-        .footer-about p {
-            margin-bottom: 20px;
+
+        .footer p {
+            margin-bottom: var(--space-md);
         }
-        
-        .footer-contact-info li {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: flex-start;
+
+        .footer-about {
+            margin-bottom: var(--space-lg);
         }
-        
-        .footer-contact-info li i {
-            margin-right: 10px;
-            color: var(--primary);
+
+        .footer-links {
+            margin-bottom: var(--space-lg);
         }
-        
-        .footer-links ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
+
         .footer-links ul li {
-            margin-bottom: 12px;
+            margin-bottom: var(--space-xs);
         }
-        
+
         .footer-links ul li a {
-            color: rgba(255, 255, 255, 0.7);
-            transition: all 0.3s ease;
+            color: var(--gray-300);
+            transition: color var(--transition-normal), padding-left var(--transition-normal);
+            display: block;
         }
-        
+
         .footer-links ul li a:hover {
             color: var(--primary);
-            padding-left: 5px;
+            padding-left: var(--space-xs);
         }
-        
-        .footer-social {
+
+        .footer-links ul li a i {
+            margin-right: var(--space-2xs);
+            color: var(--primary);
+        }
+
+        .footer-contact-item {
             display: flex;
-            margin-top: 20px;
+            margin-bottom: var(--space-sm);
         }
-        
-        .footer-social a {
+
+        .footer-contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--primary);
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-right: var(--space-sm);
+            flex-shrink: 0;
+        }
+
+        .footer-contact-text h5 {
+            color: var(--white);
+            margin-bottom: 0;
+            font-size: var(--fs-md);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: var(--space-xs);
+            margin-top: var(--space-md);
+        }
+
+        .footer-social a {
             width: 40px;
             height: 40px;
-            border-radius: 50%;
             background-color: rgba(255, 255, 255, 0.1);
-            color: white;
-            margin-right: 10px;
-            transition: all 0.3s ease;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color var(--transition-normal), color var(--transition-normal);
         }
-        
+
         .footer-social a:hover {
             background-color: var(--primary);
-            transform: translateY(-5px);
+            color: var(--dark);
         }
-        
+
         .footer-bottom {
-            padding-top: 30px;
-            margin-top: 50px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: var(--space-md) 0;
+            margin-top: var(--space-xl);
             text-align: center;
         }
-        
+
         .footer-bottom p {
             margin-bottom: 0;
         }
-        
-        /* Responsive */
-        @media (max-width: 991.98px) {
-            .hero {
-                padding: 120px 0 80px;
+
+        /* Responsive Media Queries */
+        @media (min-width: 768px) {
+            .hero-content h1 {
+                font-size: var(--fs-display-xl);
             }
-            
-            .hero h1 {
-                font-size: 2.5rem;
+
+            .about-img {
+                margin-bottom: 0;
             }
-            
-            .section-title h2 {
-                font-size: 2rem;
+        }
+
+        @media (min-width: 1024px) {
+            .section-title {
+                margin-bottom: var(--space-2xl);
             }
+
+            .footer-about,
+            .footer-links {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style type="text/css">
+        :root {
+            --primary: #ffb400;
+            --primary-dark: #e09900;
+            --secondary: #292929;
+            --secondary-light: #3d3d3d;
+            --dark: #111111;
+            --light: #f7f7f7;
+            --white: #ffffff;
+            --gray-100: #f5f5f5;
+            --gray-200: #e0e0e0;
+            --gray-300: #b0b0b0;
+            --gray-400: #888888;
+            --gray-500: #666666;
+            --gray-600: #444444;
+            --accent: #ff4a3c;
+            --font-display: 'Bebas Neue', sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --fs-display-xl: clamp(3.5rem, 10vw, 6rem);
+            --fs-display-lg: clamp(2.5rem, 7vw, 4.5rem);
+            --fs-display-md: clamp(2rem, 5vw, 3.5rem);
+            --fs-display-sm: clamp(1.75rem, 3vw, 2.5rem);
+            --fs-xl: clamp(1.5rem, 2vw, 2rem);
+            --fs-lg: clamp(1.25rem, 1.5vw, 1.5rem);
+            --fs-md: 1.125rem;
+            --fs-base: 1rem;
+            --fs-sm: 0.875rem;
+            --fs-xs: 0.75rem;
+            --line-height-tight: 1.1;
+            --line-height-normal: 1.5;
+            --line-height-loose: 1.8;
+            --tracking-tight: -0.025em;
+            --tracking-normal: 0;
+            --tracking-wide: 0.05em;
+            --tracking-wider: 0.1em;
+            --space-3xs: clamp(0.25rem, 0.5vw, 0.375rem);
+            --space-2xs: clamp(0.5rem, 0.75vw, 0.75rem);
+            --space-xs: clamp(0.75rem, 1vw, 1rem);
+            --space-sm: clamp(1rem, 1.5vw, 1.5rem);
+            --space-md: clamp(1.5rem, 2.5vw, 2rem);
+            --space-lg: clamp(2rem, 3vw, 3rem);
+            --space-xl: clamp(3rem, 4vw, 4rem);
+            --space-2xl: clamp(4rem, 6vw, 6rem);
+            --space-3xl: clamp(6rem, 8vw, 8rem);
+            --container-max: 1440px;
+            --container-sm: 640px;
+            --container-md: 768px;
+            --container-lg: 1024px;
+            --container-xl: 1280px;
+            --navbar-height: 80px;
+            --section-padding: var(--space-2xl) 0;
+            --border-radius-sm: 4px;
+            --border-radius-md: 8px;
+            --border-radius-lg: 12px;
+            --border-radius-xl: 16px;
+            --border-width: 1px;
+            --border-width-thick: 3px;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+
+
+        :root {
+            /* Color Palette - Bold Industrial */
+            --primary: #ffb400;
+            --primary-dark: #e09900;
+            --secondary: #292929;
+            --secondary-light: #3d3d3d;
+            --dark: #111111;
+            --light: #f7f7f7;
+            --white: #ffffff;
+            --gray-100: #f5f5f5;
+            --gray-200: #e0e0e0;
+            --gray-300: #b0b0b0;
+            --gray-400: #888888;
+            --gray-500: #666666;
+            --gray-600: #444444;
+            --accent: #ff4a3c;
+
+            /* Typography */
+            --font-display: 'Bebas Neue', sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --fs-display-xl: clamp(3.5rem, 10vw, 6rem);
+            --fs-display-lg: clamp(2.5rem, 7vw, 4.5rem);
+            --fs-display-md: clamp(2rem, 5vw, 3.5rem);
+            --fs-display-sm: clamp(1.75rem, 3vw, 2.5rem);
+            --fs-xl: clamp(1.5rem, 2vw, 2rem);
+            --fs-lg: clamp(1.25rem, 1.5vw, 1.5rem);
+            --fs-md: 1.125rem;
+            --fs-base: 1rem;
+            --fs-sm: 0.875rem;
+            --fs-xs: 0.75rem;
+            --line-height-tight: 1.1;
+            --line-height-normal: 1.5;
+            --line-height-loose: 1.8;
+            --tracking-tight: -0.025em;
+            --tracking-normal: 0;
+            --tracking-wide: 0.05em;
+            --tracking-wider: 0.1em;
+
+            /* Spacing */
+            --space-3xs: clamp(0.25rem, 0.5vw, 0.375rem);
+            --space-2xs: clamp(0.5rem, 0.75vw, 0.75rem);
+            --space-xs: clamp(0.75rem, 1vw, 1rem);
+            --space-sm: clamp(1rem, 1.5vw, 1.5rem);
+            --space-md: clamp(1.5rem, 2.5vw, 2rem);
+            --space-lg: clamp(2rem, 3vw, 3rem);
+            --space-xl: clamp(3rem, 4vw, 4rem);
+            --space-2xl: clamp(4rem, 6vw, 6rem);
+            --space-3xl: clamp(6rem, 8vw, 8rem);
             
-            .about-image::before {
+            /* Layout */
+            --container-max: 1440px;
+            --container-sm: 640px;
+            --container-md: 768px;
+            --container-lg: 1024px;
+            --container-xl: 1280px;
+            --navbar-height: 80px;
+            --section-padding: var(--space-2xl) 0;
+            
+            /* Effects */
+            --border-radius-sm: 4px;
+            --border-radius-md: 8px;
+            --border-radius-lg: 12px;
+            --border-radius-xl: 16px;
+            --border-width: 1px;
+            --border-width-thick: 3px;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+
+        /* Reset & Base Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--navbar-height);
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--secondary);
+            line-height: var(--line-height-normal);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--secondary);
+            transition: color var(--transition-normal);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 var(--space-sm);
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: var(--line-height-tight);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            color: var(--dark);
+            margin-bottom: var(--space-sm);
+        }
+
+        h1 {
+            font-size: var(--fs-display-xl);
+            letter-spacing: var(--tracking-tight);
+        }
+
+        h2 {
+            font-size: var(--fs-display-md);
+        }
+
+        h3 {
+            font-size: var(--fs-display-sm);
+        }
+
+        p {
+            margin-bottom: var(--space-md);
+        }
+
+        .text-primary {
+            color: var(--primary);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-uppercase {
+            text-transform: uppercase;
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            font-family: var(--font-display);
+            font-size: var(--fs-md);
+            padding: var(--space-xs) var(--space-md);
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            font-weight: 700;
+            transition: all var(--transition-normal);
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            min-width: 180px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--dark);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--secondary-light);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+            border: var(--border-width-thick) solid var(--primary);
+            color: var(--dark);
+            background-color: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+
+        /* Utilities */
+        .mt-0 { margin-top: 0; }
+        .mt-sm { margin-top: var(--space-sm); }
+        .mt-md { margin-top: var(--space-md); }
+        .mt-lg { margin-top: var(--space-lg); }
+        .mt-xl { margin-top: var(--space-xl); }
+
+        .mb-0 { margin-bottom: 0; }
+        .mb-sm { margin-bottom: var(--space-sm); }
+        .mb-md { margin-bottom: var(--space-md); }
+        .mb-lg { margin-bottom: var(--space-lg); }
+        .mb-xl { margin-bottom: var(--space-xl); }
+
+        .pt-0 { padding-top: 0; }
+        .pt-sm { padding-top: var(--space-sm); }
+        .pt-md { padding-top: var(--space-md); }
+        .pt-lg { padding-top: var(--space-lg); }
+        .pt-xl { padding-top: var(--space-xl); }
+
+        .pb-0 { padding-bottom: 0; }
+        .pb-sm { padding-bottom: var(--space-sm); }
+        .pb-md { padding-bottom: var(--space-md); }
+        .pb-lg { padding-bottom: var(--space-lg); }
+        .pb-xl { padding-bottom: var(--space-xl); }
+
+        .bg-dark { background-color: var(--dark); }
+        .bg-primary { background-color: var(--primary); }
+        .bg-secondary { background-color: var(--secondary); }
+        .bg-light { background-color: var(--light); }
+        .bg-white { background-color: var(--white); }
+
+        .text-white { color: var(--white); }
+        .text-dark { color: var(--dark); }
+
+        /* Grid & Layout */
+        .grid {
+            display: grid;
+            gap: var(--space-md);
+        }
+
+        .grid-2 {
+            grid-template-columns: 1fr;
+        }
+
+        .grid-3 {
+            grid-template-columns: 1fr;
+        }
+
+        .grid-4 {
+            grid-template-columns: 1fr;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .gap-sm {
+            gap: var(--space-sm);
+        }
+
+        .gap-md {
+            gap: var(--space-md);
+        }
+
+        .gap-lg {
+            gap: var(--space-lg);
+        }
+
+        @media (min-width: 768px) {
+            .grid-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .grid-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .grid-4 {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
+        }
+
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: var(--navbar-height);
+            padding: 0 var(--space-sm);
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: var(--fs-xl);
+            font-weight: 700;
+            color: var(--dark);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            line-height: 1;
+            transition: color var(--transition-normal);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-toggle {
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: var(--space-3xs);
+            z-index: 2000;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: var(--dark);
+            margin: 6px 0;
+            transition: var(--transition-normal);
+        }
+
+        .nav-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+
+        .nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: right var(--transition-normal);
+            z-index: 1500;
+        }
+
+        .nav-menu.active {
+            right: 0;
+        }
+
+        .nav-menu a {
+            font-family: var(--font-display);
+            font-size: var(--fs-lg);
+            color: var(--dark);
+            margin: var(--space-xs) 0;
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            position: relative;
+            display: inline-block;
+            padding: var(--space-3xs) var(--space-xs);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary);
+            transition: width var(--transition-normal);
+        }
+
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            margin-top: var(--space-md);
+        }
+
+        @media (min-width: 1024px) {
+            .nav-toggle {
                 display: none;
             }
-            
-            .hero-image {
-                margin-top: 50px;
+
+            .nav-menu {
+                position: static;
+                width: auto;
+                height: auto;
+                background-color: transparent;
+                flex-direction: row;
+                gap: var(--space-md);
+            }
+
+            .nav-menu a {
+                font-size: var(--fs-md);
+                margin: 0;
+            }
+
+            .nav-cta {
+                margin-top: 0;
+                margin-left: var(--space-md);
             }
         }
-        
-        @media (max-width: 767.98px) {
-            .hero {
-                padding: 100px 0 60px;
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            background-color: var(--dark);
+            margin-top: var(--navbar-height);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            padding: var(--space-lg) 0;
+        }
+
+        .hero-content h1 {
+            color: var(--white);
+            margin-bottom: var(--space-md);
+            position: relative;
+        }
+
+        .hero-content h1::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 100px;
+            height: 5px;
+            background-color: var(--primary);
+        }
+
+        .hero-content p {
+            font-size: var(--fs-lg);
+            color: var(--gray-200);
+            margin-bottom: var(--space-lg);
+            max-width: 600px;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: var(--section-padding);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+            position: relative;
+        }
+
+        .section-title h2 {
+            display: inline-block;
+            margin-bottom: var(--space-xs);
+            position: relative;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+        }
+
+        .section-title p {
+            font-size: var(--fs-lg);
+            color: var(--gray-500);
+            max-width: 700px;
+            margin: var(--space-sm) auto;
+        }
+
+        /* About Section */
+        .about-img {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: var(--space-md);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            transition: transform var(--transition-normal);
+        }
+
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-experience {
+            position: absolute;
+            bottom: var(--space-md);
+            left: var(--space-md);
+            background-color: var(--primary);
+            padding: var(--space-sm);
+            color: var(--dark);
+            font-weight: 700;
+            z-index: 10;
+            text-align: center;
+            min-width: 140px;
+        }
+
+        .about-experience span {
+            display: block;
+            font-size: var(--fs-display-sm);
+            line-height: 1;
+            font-family: var(--font-display);
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-md);
+        }
+
+        .about-feature-icon {
+            background-color: var(--primary);
+            color: var(--dark);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: var(--space-sm);
+            font-size: var(--fs-lg);
+            flex-shrink: 0;
+        }
+
+        .about-feature-content h4 {
+            font-size: var(--fs-lg);
+            margin-bottom: var(--space-2xs);
+        }
+
+        .about-content h2 {
+            text-align: left;
+            margin-bottom: var(--space-md);
+        }
+
+        .about-content h2::after {
+            left: 0;
+            transform: none;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--light);
+        }
+
+        .service-card {
+            background-color: var(--white);
+            padding: var(--space-md);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--gray-200);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background-color: var(--primary);
+            transition: height var(--transition-slow);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-card:hover::before {
+            height: 100%;
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--primary);
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--fs-xl);
+            margin-bottom: var(--space-md);
+            transition: transform var(--transition-normal);
+        }
+
+        .service-card:hover .service-icon {
+            transform: rotateY(180deg);
+        }
+
+        .service-card h3 {
+            font-size: var(--fs-lg);
+            margin-bottom: var(--space-sm);
+            position: relative;
+            padding-bottom: var(--space-xs);
+        }
+
+        .service-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .service-card p {
+            margin-bottom: var(--space-md);
+            color: var(--gray-600);
+        }
+
+        .service-card .btn {
+            margin-top: auto;
+        }
+
+        /* Projects Section */
+        .project-item {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: var(--space-md);
+        }
+
+        .project-img {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 16/9;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-normal);
+        }
+
+        .project-item:hover .project-img img {
+            transform: scale(1.1);
+        }
+
+        .project-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: var(--space-md);
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+            transition: opacity var(--transition-normal);
+        }
+
+        .project-title {
+            color: var(--white);
+            margin-bottom: var(--space-2xs);
+        }
+
+        .project-category {
+            color: var(--primary);
+            font-weight: 500;
+            font-size: var(--fs-sm);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+        }
+
+        .project-link {
+            position: absolute;
+            top: var(--space-md);
+            right: var(--space-md);
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--fs-lg);
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity var(--transition-normal), transform var(--transition-normal);
+        }
+
+        .project-item:hover .project-link {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stats Section */
+        .stats {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: var(--space-xl) 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            margin-bottom: var(--space-md);
+        }
+
+        .stat-icon {
+            font-size: var(--fs-display-sm);
+            color: var(--primary);
+            margin-bottom: var(--space-sm);
+        }
+
+        .stat-number {
+            font-size: var(--fs-display-sm);
+            font-weight: 900;
+            color: var(--white);
+            font-family: var(--font-display);
+            margin-bottom: var(--space-2xs);
+            line-height: 1;
+        }
+
+        .stat-text {
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            font-size: var(--fs-sm);
+            color: var(--gray-300);
+        }
+
+        /* Why Choose Us */
+        .why-choose-us {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-choose-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        .why-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .why-item {
+            background-color: var(--white);
+            padding: var(--space-md);
+            margin-bottom: var(--space-md);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            border: 1px solid var(--gray-200);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: var(--primary);
+            transition: width var(--transition-normal);
+        }
+
+        .why-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .why-item:hover::after {
+            width: 100%;
+        }
+
+        .why-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: var(--space-sm);
+        }
+
+        .why-item h4 {
+            margin-bottom: var(--space-xs);
+            font-size: var(--fs-lg);
+        }
+
+        .why-item p {
+            color: var(--gray-600);
+            margin-bottom: 0;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--light);
+        }
+
+        .testimonial-item {
+            background-color: var(--white);
+            padding: var(--space-md);
+            margin-bottom: var(--space-md);
+            position: relative;
+            border: 1px solid var(--gray-200);
+        }
+
+        .testimonial-item::before {
+            content: '"';
+            font-size: 120px;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            color: var(--primary);
+            opacity: 0.2;
+            font-family: var(--font-display);
+            line-height: 1;
+        }
+
+        .testimonial-content {
+            position: relative;
+            z-index: 10;
+            margin-bottom: var(--space-md);
+            font-style: italic;
+            color: var(--gray-600);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: var(--space-sm);
+        }
+
+        .testimonial-author-info h5 {
+            margin-bottom: 0;
+            font-size: var(--fs-md);
+        }
+
+        .testimonial-author-info span {
+            color: var(--gray-500);
+            font-size: var(--fs-sm);
+        }
+
+        /* CTA Section */
+        .cta {
+            background-color: var(--primary);
+            color: var(--dark);
+            padding: var(--space-xl) 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: var(--dark);
+            margin-bottom: var(--space-md);
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto var(--space-lg);
+            font-size: var(--fs-lg);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark);
+            color: var(--gray-300);
+            padding-top: var(--space-xl);
+        }
+
+        .footer h4 {
+            color: var(--white);
+            margin-bottom: var(--space-md);
+            padding-bottom: var(--space-xs);
+            position: relative;
+        }
+
+        .footer h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .footer p {
+            margin-bottom: var(--space-md);
+        }
+
+        .footer-about {
+            margin-bottom: var(--space-lg);
+        }
+
+        .footer-links {
+            margin-bottom: var(--space-lg);
+        }
+
+        .footer-links ul li {
+            margin-bottom: var(--space-xs);
+        }
+
+        .footer-links ul li a {
+            color: var(--gray-300);
+            transition: color var(--transition-normal), padding-left var(--transition-normal);
+            display: block;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--primary);
+            padding-left: var(--space-xs);
+        }
+
+        .footer-links ul li a i {
+            margin-right: var(--space-2xs);
+            color: var(--primary);
+        }
+
+        .footer-contact-item {
+            display: flex;
+            margin-bottom: var(--space-sm);
+        }
+
+        .footer-contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: var(--space-sm);
+            flex-shrink: 0;
+        }
+
+        .footer-contact-text h5 {
+            color: var(--white);
+            margin-bottom: 0;
+            font-size: var(--fs-md);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: var(--space-xs);
+            margin-top: var(--space-md);
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color var(--transition-normal), color var(--transition-normal);
+        }
+
+        .footer-social a:hover {
+            background-color: var(--primary);
+            color: var(--dark);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: var(--space-md) 0;
+            margin-top: var(--space-xl);
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 0;
+        }
+
+        /* Responsive Media Queries */
+        @media (min-width: 768px) {
+            .hero-content h1 {
+                font-size: var(--fs-display-xl);
             }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .section-padding {
-                padding: 70px 0;
-            }
-            
-            .about, .services, .process, .why-choose-us, .testimonials {
-                padding: 70px 0;
-            }
-            
-            .process-step {
-                padding: 30px 20px;
-            }
-            
-            .step-number {
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
-            }
-            
-            .footer {
-                padding: 60px 0 30px;
-            }
-            
-            .footer-widget {
-                margin-bottom: 40px;
+
+            .about-img {
+                margin-bottom: 0;
             }
         }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
+
+        @media (min-width: 1024px) {
+            .section-title {
+                margin-bottom: var(--space-2xl);
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+
+            .footer-about,
+            .footer-links {
+                margin-bottom: 0;
             }
         }
-        
-        .animate-fade-in-up {
-            animation: fadeInUp 0.6s ease forwards;
-        }
-        
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-300 { animation-delay: 0.3s; }
-        .delay-400 { animation-delay: 0.4s; }
-        .delay-500 { animation-delay: 0.5s; }
+    
     </style>
+<style>
+  /* Industry-specific color scheme for General Business */
+  :root {
+    /* Override ALL color variables with industry-specific colors */
+    --primary-color: #2563eb !important;
+    --primary-light: #1d4ed8 !important;
+    --primary-dark: #1e40af !important;
+    
+    --secondary-color: #64748b !important;
+    --secondary-light: #475569 !important;
+    --secondary-dark: #334155 !important;
+    
+    --accent-color: #059669 !important;
+    --accent-light: #047857 !important;
+    --accent-dark: #065f46 !important;
+    
+    /* Override common template color variables */
+    --primary: #2563eb !important;
+    --secondary: #64748b !important;
+    --accent: #059669 !important;
+    --dark: #1A1A1A !important;
+    --light: #FFFFFF !important;
+    --gray: #6C6C6C !important;
+    
+    /* Override gradient */
+    --gradient: linear-gradient(135deg, #2563eb 0%, #1e40af 100%) !important;
+    
+    /* Common color mappings */
+    --brand-primary: #2563eb !important;
+    --brand-secondary: #64748b !important;
+    --color-primary: #2563eb !important;
+    --color-secondary: #64748b !important;
+    --theme-primary: #2563eb !important;
+    --theme-secondary: #64748b !important;
+  }
+  
+  /* Apply colors to common Bootstrap and template patterns */
+  .btn-primary,
+  .primary-button,
+  button.primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+  }
+  
+  .btn-primary:hover,
+  .primary-button:hover,
+  button.primary:hover {
+    background-color: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+  }
+  
+  .text-primary {
+    color: var(--primary-color) !important;
+  }
+  
+  .bg-primary {
+    background-color: var(--primary-color) !important;
+  }
+  
+  .border-primary {
+    border-color: var(--primary-color) !important;
+  }
+  
+  /* Links */
+  a {
+    color: var(--primary-color);
+  }
+  
+  a:hover {
+    color: var(--primary-dark);
+  }
+  
+  /* Hero sections */
+  .hero,
+  .hero-section,
+  .jumbotron {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%) !important;
+  }
+  
+  /* Navigation */
+  .navbar-brand {
+    color: var(--primary-color) !important;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--primary-color) !important;
+  }
+  
+  /* Forms */
+  .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color), 0.25);
+  }
+  
+  /* Cards and sections */
+  .card-header {
+    background-color: var(--primary-light);
+    color: white;
+  }
+  
+  /* Industry-specific adjustments */
+  
+  
+  
+  
+  
+  
+  /* Aggressive overrides for templates with hardcoded colors */
+  /* Target specific color values that templates might use */
+  [style*="#FF6B35"] { color: #2563eb !important; }
+  [style*="#F7931E"] { color: #64748b !important; }
+  [style*="#FFD23F"] { color: #059669 !important; }
+  
+  /* Override inline styles and hardcoded backgrounds */
+  .hero[style*="background"] {
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%) !important;
+  }
+  
+  /* Force color changes on elements that might have inline styles */
+  .text-primary,
+  [class*="text-primary"],
+  [class*="color-primary"] {
+    color: #2563eb !important;
+  }
+  
+  .bg-primary,
+  [class*="bg-primary"],
+  [class*="background-primary"] {
+    background-color: #2563eb !important;
+  }
+  
+  /* Override gradient classes */
+  .text-gradient,
+  [class*="gradient"] {
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+  }
+  
+  /* Ensure buttons use new colors */
+  button,
+  .btn,
+  [type="button"],
+  [type="submit"] {
+    transition: all 0.3s ease;
+  }
+  
+  button:not(.btn-secondary):not(.btn-light):not(.btn-dark),
+  .btn:not(.btn-secondary):not(.btn-light):not(.btn-dark) {
+    background-color: #2563eb !important;
+    border-color: #2563eb !important;
+  }
+  
+  button:not(.btn-secondary):not(.btn-light):not(.btn-dark):hover,
+  .btn:not(.btn-secondary):not(.btn-light):not(.btn-dark):hover {
+    background-color: #1e40af !important;
+    border-color: #1e40af !important;
+  }
+</style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <!-- Header -->
+    <header class="header">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Musicyhhjkh</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="services.html">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="case-studies.html">Case Studies</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-primary ms-lg-3" href="contact.html">Get Started</a>
-                    </li>
+            <nav class="navbar">
+                <a href="index.html" class="logo">BUILD<span>RIGHT</span></a>
+                <button class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="builds and renovations.html">builds and renovations</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li class="nav-cta"><a href="contact.html" class="btn btn-primary">GET A QUOTE</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
-    </nav>
-<section class="hero">
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg" style="background-image: url('images/hero-bg.jpg');"></div>
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="hero-content">
-                        <h1 class="animate-fade-in-up">Strategic Solutions for Business Growth</h1>
-                        <p class="animate-fade-in-up delay-100">At tst Holistic Wellness, we offer personalized alternative medicine solutions to help you achieve optimal health and well-being.  Discover a holistic approach to healing that addresses the root cause of your concerns.</p>
-                        <div class="animate-fade-in-up delay-200">
-                            <a href="contact.html" class="btn btn-primary me-3">Schedule a Consultation</a>
-                            <a href="about.html" class="btn btn-outline-primary">Learn More</a>
-                        </div>
-                        <div class="hero-stats">
-                            <div class="stat-item animate-fade-in-up delay-300">
-                                <div class="stat-number">98%</div>
-                                <div class="stat-text">Client Satisfaction</div>
-                            </div>
-                            <div class="stat-item animate-fade-in-up delay-400">
-                                <div class="stat-number">500+</div>
-                                <div class="stat-text">Projects Completed</div>
-                            </div>
-                            <div class="stat-item animate-fade-in-up delay-500">
-                                <div class="stat-number">15+</div>
-                                <div class="stat-text">Years Experience</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="hero-image animate-fade-in-up delay-300">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=600&q=80" alt="StrategyPlus Consulting">
-                    </div>
+            <div class="hero-content">
+                <h1>BUILDING <span class="text-primary">EXCELLENCE</span><br>WITH STRENGTH</h1>
+                <p>With over 25 Trusted construction expertise in Not specified, BuildRight Construction delivers exceptional results in residential, commercial, and industrial construction builds and renovations. We build foundations for success.</p>
+                <div class="btn-group">
+                    <a href="services.html" class="btn btn-primary">our construction and renovation expertise</a>
+                    <a href="builds and renovations.html" class="btn btn-outline">VIEW builds and renovations</a>
                 </div>
             </div>
         </div>
     </section>
-<footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-widget footer-about">
-                        <h4>About StrategyPlus</h4>
-                        <p>StrategyPlus is a premier business consulting firm helping organizations overcome challenges, capitalize on opportunities, and achieve sustainable growth.</p>
-                        <ul class="footer-social">
-                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
-                            </svg></a></li>
-                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
-                            </svg></a></li>
-                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path>
-                            </svg></a></li>
-                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
-                            </svg></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <div class="footer-widget footer-links">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="case-studies.html">Case Studies</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget footer-links">
-                        <h4>Our Services</h4>
-                        <ul>
-                            <li><a href="services.html">Strategic Planning</a></li>
-                            <li><a href="services.html">Organizational Development</a></li>
-                            <li><a href="services.html">Financial Analysis</a></li>
-                            <li><a href="services.html">Process Optimization</a></li>
-                            <li><a href="services.html">Market Entry Strategy</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <h4>Contact Us</h4>
-                        <ul class="footer-contact-info">
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path>
-                                </svg>
-                                <span>123 Business Avenue, Suite 500<br>New York, NY 10001, USA</span>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
-                                </svg>
-                                <span>+1 (555) 123-4567</span>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path>
-                                </svg>
-                                <span>info@strategyplus.com</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2023 StrategyPlus. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-
-    <!-- Navbar -->
-    
-
-    <!-- Hero Section -->
-    
 
     <!-- About Section -->
-    <section class="about section-padding">
+    <section class="section about">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="about-image animate-fade-in-up">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600&q=80" alt="About StrategyPlus">
+            <div class="grid grid-2 items-center">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600&q=80" alt="About BuildRight Construction">
+                    <div class="about-experience">
+                        <span>25+</span> Years Experience
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="about-content">
-                        <div class="section-title">
-                            <h2>About StrategyPlus</h2>
-                            <p>At tst Holistic Wellness, we offer personalized alternative medicine software solutions and digital innovations to help you achieve optimal health and well-being.  Discover a holistic approach to healing that addresses the root cause of your concerns.</p>
-                        </div>
-                        <p>tst Holistic Wellness is dedicated to providing compassionate and effective alternative medicine therapies.  We believe in the body's innate ability to heal itself and strive to create a supportive environment where you can thrive.  Our experienced practitioners are committed to understanding your unique needs and developing a personalized treatment plan.</p>
-                        <p>We are located in test and serve the surrounding community with integrity and care.</p>
-                        <div class="row mt-4 mb-4">
-                            <div class="col-md-6">
-                                <div class="feature-item">
-                                    <div class="feature-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.793L6.354 8.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 9.293V5.5z"></path>
-                                            <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"></path>
-                                            <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"></path>
-                                        </svg>
-                                    </div>
-                                    <h3>experienced developers and engineers</h3>
-                                    <p>Restore balance and promote healing with traditional acupuncture techniques.  Effective for pain management, stress reduction, and overall well-being.</p>
-                                </div>
+                <div class="about-content">
+                    <h2>WE BUILD WITH EXCELLENCE AND INTEGRITY</h2>
+                    <p>Founded in 1998, BuildRight Construction has established itself as a leader in the construction industry. We specialize in delivering high-quality construction services for residential, commercial, and industrial builds and renovations.</p>
+                    <p>Our experienced team combines technical expertise with innovative construction builds and renovations and renovations to tackle complex construction challenges. We prioritize safety, quality, and client satisfaction on every project.</p>
+                    
+                    <div class="grid grid-2 mt-lg">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="bi bi-check-circle"></i>
                             </div>
-                            <div class="col-md-6">
-                                <div class="feature-item">
-                                    <div class="feature-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
-                                            <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
-                                        </svg>
-                                    </div>
-                                    <h3>Proven Results</h3>
-                                    <p>Release tension, improve circulation, and experience deep relaxation with our therapeutic massage services.  Customized to your individual needs.</p>
-                                </div>
+                            <div class="about-feature-content">
+                                <h4>QUALITY ASSURANCE</h4>
+                                <p>We maintain rigorous quality standards throughout every phase of construction.</p>
                             </div>
                         </div>
-                        <a href="about.html" class="btn btn-primary">More About Us</a>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <div class="about-feature-content">
+                                <h4>skilled contractors and craftsmen</h4>
+                                <p>Our skilled professionals bring Trusted construction expertise in Not specified to every project.</p>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <a href="about.html" class="btn btn-primary mt-md">LEARN MORE</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services section-padding">
+    <section class="section services">
         <div class="container">
-            <div class="section-title text-center">
-                <h2 class="mx-auto" style="max-width: 600px;">Our Consulting Services</h2>
-                <p>Comprehensive software solutions and digital innovations to meet Cyberhunt needs</p>
+            <div class="section-title">
+                <h2>OUR CONSTRUCTION SERVICES</h2>
+                <p>Expert construction builds and renovations and renovations for your construction needs</p>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"></path>
-                            </svg>
-                        </div>
-                        <h3>Strategic Planning</h3>
-                        <p>Develop clear roadmaps for sustainable growth with our comprehensive strategic planning services.</p>
-                        <a href="services.html" class="btn btn-outline-primary">Learn More</a>
+            
+            <div class="grid grid-3">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-house"></i>
                     </div>
+                    <h3>RESIDENTIAL CONSTRUCTION</h3>
+                    <p>From custom homes to renovations, we deliver exceptional residential construction services tailored to your specific needs and preferences.</p>
+                    <a href="services.html" class="btn btn-outline">LEARN MORE</a>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
-                                <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"></path>
-                            </svg>
-                        </div>
-                        <h3>Organizational Development</h3>
-                        <p>Optimize your organizational structure, culture, and talent management to drive performance.</p>
-                        <a href="services.html" class="btn btn-outline-primary">Learn More</a>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-building"></i>
                     </div>
+                    <h3>COMMERCIAL CONSTRUCTION</h3>
+                    <p>We design and build commercial spaces that combine functionality, efficiency, and aesthetic appeal for businesses of all sizes.</p>
+                    <a href="services.html" class="btn btn-outline">LEARN MORE</a>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z"></path>
-                                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path>
-                                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path>
-                            </svg>
-                        </div>
-                        <h3>Financial Analysis</h3>
-                        <p>Gain insights into your financial performance and identify opportunities for optimization.</p>
-                        <a href="services.html" class="btn btn-outline-primary">Learn More</a>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-gear"></i>
                     </div>
+                    <h3>INDUSTRIAL CONSTRUCTION</h3>
+                    <p>Our industrial construction services cover manufacturing facilities, warehouses, and specialized industrial infrastructure builds and renovations.</p>
+                    <a href="services.html" class="btn btn-outline">LEARN MORE</a>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"></path>
-                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"></path>
-                            </svg>
-                        </div>
-                        <h3>Business Process Optimization</h3>
-                        <p>Streamline operations, reduce costs, and improve efficiency through process improvement.</p>
-                        <a href="services.html" class="btn btn-outline-primary">Learn More</a>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-tools"></i>
                     </div>
+                    <h3>RENOVATION & REMODELING</h3>
+                    <p>Transform your existing spaces with our comprehensive renovation and remodeling services for both residential and commercial properties.</p>
+                    <a href="services.html" class="btn btn-outline">LEARN MORE</a>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"></path>
-                                <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
-                            </svg>
-                        </div>
-                        <h3>Market Entry Strategy</h3>
-                        <p>Develop effective strategies for entering new markets and expanding Cyberhunt reach.</p>
-                        <a href="services.html" class="btn btn-outline-primary">Learn More</a>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-clipboard-check"></i>
                     </div>
+                    <h3>PROJECT MANAGEMENT</h3>
+                    <p>Our expert project management team ensures your construction project is completed on time, within budget, and to the highest quality standards.</p>
+                    <a href="services.html" class="btn btn-outline">LEARN MORE</a>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M8 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm4 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM5.5 7a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm4 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm3.5-3a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"></path>
-                            </svg>
-                        </div>
-                        <h3>Digital Transformation</h3>
-                        <p>Navigate the digital landscape and leverage technology to drive innovation and growth.</p>
-                        <a href="services.html" class="btn btn-outline-primary">Learn More</a>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-rulers"></i>
                     </div>
+                    <h3>DESIGN-BUILD SERVICES</h3>
+                    <p>Our integrated design-build approach streamlines the construction process by combining design and construction services under one roof.</p>
+                    <a href="services.html" class="btn btn-outline">LEARN MORE</a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-lg">
+                <a href="services.html" class="btn btn-primary">VIEW ALL SERVICES</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- builds and renovations Section -->
+    <section class="section builds and renovations">
+        <div class="container">
+            <div class="section-title">
+                <h2>OUR RECENT builds and renovations</h2>
+                <p>Showcasing our expertise and commitment to excellence</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="project-item">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Luxury Residential Complex">
+                    </div>
+                    <div class="project-overlay">
+                        <h3 class="project-title">LUXURY RESIDENTIAL COMPLEX</h3>
+                        <p class="project-category">RESIDENTIAL CONSTRUCTION</p>
+                    </div>
+                    <a href="builds and renovations.html" class="project-link">
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Modern Office Building">
+                    </div>
+                    <div class="project-overlay">
+                        <h3 class="project-title">MODERN OFFICE BUILDING</h3>
+                        <p class="project-category">COMMERCIAL CONSTRUCTION</p>
+                    </div>
+                    <a href="builds and renovations.html" class="project-link">
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Manufacturing Facility">
+                    </div>
+                    <div class="project-overlay">
+                        <h3 class="project-title">MANUFACTURING FACILITY</h3>
+                        <p class="project-category">INDUSTRIAL CONSTRUCTION</p>
+                    </div>
+                    <a href="builds and renovations.html" class="project-link">
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1493421419110-74f4e85ba126?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Historic Building Renovation">
+                    </div>
+                    <div class="project-overlay">
+                        <h3 class="project-title">HISTORIC BUILDING RENOVATION</h3>
+                        <p class="project-category">RENOVATION & REMODELING</p>
+                    </div>
+                    <a href="builds and renovations.html" class="project-link">
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1542744173-8659b8e77b29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Shopping Mall Complex">
+                    </div>
+                    <div class="project-overlay">
+                        <h3 class="project-title">SHOPPING MALL COMPLEX</h3>
+                        <p class="project-category">COMMERCIAL CONSTRUCTION</p>
+                    </div>
+                    <a href="builds and renovations.html" class="project-link">
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="Luxury Custom Home">
+                    </div>
+                    <div class="project-overlay">
+                        <h3 class="project-title">LUXURY CUSTOM HOME</h3>
+                        <p class="project-category">RESIDENTIAL CONSTRUCTION</p>
+                    </div>
+                    <a href="builds and renovations.html" class="project-link">
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-lg">
+                <a href="builds and renovations.html" class="btn btn-primary">VIEW ALL builds and renovations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="grid grid-4">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <div class="stat-number">500+</div>
+                    <div class="stat-text">builds and renovations COMPLETED</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <div class="stat-number">120+</div>
+                    <div class="stat-text">SKILLED PROFESSIONALS</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="bi bi-trophy"></i>
+                    </div>
+                    <div class="stat-number">25+</div>
+                    <div class="stat-text">Trusted construction expertise in Not specified</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="bi bi-emoji-smile"></i>
+                    </div>
+                    <div class="stat-number">450+</div>
+                    <div class="stat-text">HAPPY property owners and developers</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section class="process section-padding">
-        <div class="container">
-            <div class="section-title text-center">
-                <h2 class="mx-auto" style="max-width: 600px;">Our Consulting Process</h2>
-                <p>A systematic approach to delivering effective software solutions and digital innovations</p>
+    <!-- Why Choose Us -->
+    <section class="section why-choose-us">
+        <div class="why-choose-bg" style="background-image: url('images/why-choose-bg.jpg');"></div>
+        <div class="container why-content">
+            <div class="section-title">
+                <h2>WHY CHOOSE BUILDRIGHT</h2>
+                <p>The qualities that set us apart</p>
             </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="process-step">
-                        <div class="step-number">1</div>
-                        <h3>Discovery</h3>
-                        <p>We begin by understanding Cyberhunt, challenges, and objectives through in-depth discussions and data analysis.</p>
+            
+            <div class="grid grid-3">
+                <div class="why-item">
+                    <div class="why-icon">
+                        <i class="bi bi-shield-check"></i>
                     </div>
+                    <h4>QUALITY ASSURANCE</h4>
+                    <p>We're committed to delivering the highest quality construction that stands the test of time. Our strict quality control processes ensure excellence at every stage.</p>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="process-step">
-                        <div class="step-number">2</div>
-                        <h3>Analysis</h3>
-                        <p>Our team conducts comprehensive analysis to identify key issues, opportunities, and potential software solutions and digital innovations.</p>
+                
+                <div class="why-item">
+                    <div class="why-icon">
+                        <i class="bi bi-clock-history"></i>
                     </div>
+                    <h4>ON-TIME DELIVERY</h4>
+                    <p>We understand the importance of timelines in construction builds and renovations. Our efficient project management ensures we deliver on schedule without compromising quality.</p>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="process-step">
-                        <div class="step-number">3</div>
-                        <h3>Strategy</h3>
-                        <p>We develop tailored strategies and detailed implementation plans to address your specific needs.</p>
+                
+                <div class="why-item">
+                    <div class="why-icon">
+                        <i class="bi bi-wallet2"></i>
                     </div>
+                    <h4>COST-EFFECTIVE construction builds and renovations and renovations</h4>
+                    <p>We offer competitive pricing and work diligently to stay within budget constraints while maintaining high standards of craftsmanship and materials.</p>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="process-step">
-                        <div class="step-number">4</div>
-                        <h3>Implementation</h3>
-                        <p>We work alongside your team to implement software solutions and digital innovations, monitor progress, and make adjustments as needed.</p>
+                
+                <div class="why-item">
+                    <div class="why-icon">
+                        <i class="bi bi-person-check"></i>
                     </div>
+                    <h4>EXPERIENCED TEAM</h4>
+                    <p>Our team of construction professionals brings decades of combined experience across all types of builds and renovations, ensuring expertise in every aspect of your build.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-us section-padding">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="section-title">
-                        <h2>Why Choose StrategyPlus</h2>
-                        <p>What sets our consulting services apart</p>
+                
+                <div class="why-item">
+                    <div class="why-icon">
+                        <i class="bi bi-lightbulb"></i>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"></path>
-
-✅ WHAT TO CHANGE (CONTENT ONLY):
-- Replace Musicyhhjkh with "Musicyhhjkh"
-- Replace Professional - HR/Recruiting with "Professional - HR/Recruiting"
-- Replace test with "test"
-- Replace ANY hardcoded business names (like "Grace Community Church", "FitnessPro Studio", "TechStart software solutions and digital innovations", etc.) with "Musicyhhjkh"
-- Replace ALL instances of template business names with the actual business name "Musicyhhjkh"
-- Replace any hardcoded location references with "test"
-- Replace generic placeholder text with business-specific content
-- Make content more engaging and professional for this business type
-
-❌ WHAT TO NEVER CHANGE (STRUCTURE & DESIGN):
-- Any CSS classes, IDs, or styling attributes
-- HTML tags, structure, or element hierarchy
-- Any visual design elements or layout
-- Navigation links or menus
-- Any technical attributes or data attributes
-
-🔍 REPLACEMENT VALIDATION:
-- Ensure NO template business names remain in this chunk
-- Replace ALL hardcoded business references with "Musicyhhjkh"
-- Make content specific to Professional - HR/Recruiting industry
-
-🎯 OUTPUT REQUIREMENTS:
-- Return ONLY the enhanced chunk content
-- Preserve exact HTML structure and all attributes
-- Keep all CSS classes and IDs intact
-- Maintain chunk boundaries and structure
-- ALL business content must be completely customized for "Musicyhhjkh"
-
-ENHANCE THIS CHUNK NOW:
-                                    </svg>
-                                </div>
-                                <h3>Industry Expertise</h3>
-                                <p>Specialists with deep knowledge across diverse industry sectors.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                                        <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"></path>
-                                    </svg>
-                                </div>
-                                <h3>Innovative Solutions</h3>
-                                <p>Creative approaches that address complex business challenges.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                                        <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
-                                        <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z"></path>
-                                    </svg>
-                                </div>
-                                <h3>Result-Oriented</h3>
-                                <p>Focus on delivering measurable results and ROI for clients.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                                        <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path>
-                                    </svg>
-                                </div>
-                                <h3>Customized Approach</h3>
-                                <p>Tailored strategies that align with your unique business needs.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="about.html" class="btn btn-primary mt-4">Discover More</a>
+                    <h4>INNOVATIVE APPROACH</h4>
+                    <p>We stay at the forefront of construction technology and methodologies, implementing innovative construction builds and renovations and renovations that improve efficiency and results.</p>
                 </div>
-                <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600&q=80" alt="Why Choose StrategyPlus" class="img-fluid rounded mb-4">
-                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600&q=80" alt="Why Choose StrategyPlus" class="img-fluid rounded">
-                        </div>
-                        <div class="col-md-6 mt-md-5">
-                            <img src="/images/why-choose-3.jpg" alt="Why Choose StrategyPlus" class="img-fluid rounded mb-4">
-                            <img src="https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600&q=80" alt="Why Choose StrategyPlus" class="img-fluid rounded">
-                        </div>
+                
+                <div class="why-item">
+                    <div class="why-icon">
+                        <i class="bi bi-headset"></i>
                     </div>
+                    <h4>EXCEPTIONAL SERVICE</h4>
+                    <p>Client satisfaction is our top priority. We maintain clear communication throughout your project and provide responsive, attentive service from start to finish.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials section-padding">
+    <!-- Testimonials -->
+    <section class="section testimonials">
         <div class="container">
-            <div class="section-title text-center">
-                <h2 class="mx-auto" style="max-width: 600px;">What Our Clients Say</h2>
-                <p>Success stories from businesses we've helped</p>
+            <div class="section-title">
+                <h2>CLIENT TESTIMONIALS</h2>
+                <p>What our property owners and developers say about working with us</p>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="testimonial-card">
-                        <div class="quote-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"></path>
-                            </svg>
-                        </div>
-                        <p class="testimonial-text">"StrategyPlus transformed Cyberhunt with their strategic insights and practical solutions. Our revenue has increased by 35% since implementing their recommendations."</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100&q=80" alt="Testimonial Author">
-                            <div class="author-info">
-                                <h4>Sarah Johnson</h4>
-                                <p>CEO, TechNova Solutions</p>
-                            </div>
+            
+            <div class="grid grid-3">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"BuildRight Construction exceeded our expectations with our new office building. They delivered exceptional quality work on schedule and within our budget. Their attention to detail and professional approach made the entire process smooth and stress-free."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100&q=80" alt="Robert Johnson">
+                        <div class="testimonial-author-info">
+                            <h5>ROBERT JOHNSON</h5>
+                            <span>CEO, Johnson Enterprises</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="testimonial-card">
-                        <div class="quote-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"></path>
-                            </svg>
-                        </div>
-                        <p class="testimonial-text">"The organizational restructuring led by StrategyPlus improved our operational efficiency by 40%. Their team's expertise and collaborative approach made the process seamless."</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100&q=80" alt="Testimonial Author">
-                            <div class="author-info">
-                                <h4>Michael Chen</h4>
-                                <p>COO, Global Manufacturing Inc.</p>
-                            </div>
+                
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"We hired BuildRight for our custom home construction and couldn't be happier with the results. Their team was professional, responsive, and truly cared about bringing our vision to life. The quality of craftsmanship is outstanding, and we love our new home."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100&q=80" alt="Sarah & Michael Williams">
+                        <div class="testimonial-author-info">
+                            <h5>SARAH & MICHAEL WILLIAMS</h5>
+                            <span>Homeowners</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="testimonial-card">
-                        <div class="quote-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"></path>
-                            </svg>
-                        </div>
-                        <p class="testimonial-text">"As a startup, we needed strategic guidance to scale. StrategyPlus provided invaluable insights that helped us secure funding and establish a sustainable growth model."</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100&q=80" alt="Testimonial Author">
-                            <div class="author-info">
-                                <h4>Jessica Martinez</h4>
-                                <p>Founder, EcoHub Innovations</p>
-                            </div>
+                
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"The renovation of our manufacturing facility was a complex project with strict operational requirements. BuildRight managed the entire process with expertise, ensuring minimal disruption to our operations while delivering exceptional results on time."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100&q=80" alt="David Thompson">
+                        <div class="testimonial-author-info">
+                            <h5>DAVID THOMPSON</h5>
+                            <span>Operations Director, Thompson Manufacturing</span>
                         </div>
                     </div>
                 </div>
@@ -1216,52 +2843,112 @@ ENHANCE THIS CHUNK NOW:
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
-            <h2>Ready to Transform Cyberhunt?</h2>
-            <p>Schedule a free consultation with our expert consultants to discuss Cyberhunt needs and discover how we can help you achieve sustainable growth.</p>
-            <a href="contact.html" class="btn btn-light">Schedule a Consultation</a>
+            <h2>READY TO START YOUR CONSTRUCTION PROJECT?</h2>
+            <p>Connect with Musicyhhjkh for exceptional construction services for a free project assessment and estimate. Our team is ready to bring your vision to life with quality construction services tailored to your needs.</p>
+            <a href="contact.html" class="btn btn-secondary">CONTACT US NOW</a>
         </div>
     </section>
 
     <!-- Footer -->
-    
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4">
+                <div class="footer-about">
+                    <h4>ABOUT BUILDRIGHT</h4>
+                    <p>BuildRight Construction is a full-service construction company serving residential, commercial, and industrial property owners and developers. With 25+ Trusted construction expertise in Not specified, we deliver quality construction services with integrity and excellence.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+                        <li><a href="builds and renovations.html"><i class="bi bi-chevron-right"></i> builds and renovations</a></li>
+                        <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>our construction and renovation expertise</h4>
+                    <ul>
+                        <li><a href="services.html"><i class="bi bi-chevron-right"></i> Residential Construction</a></li>
+                        <li><a href="services.html"><i class="bi bi-chevron-right"></i> Commercial Construction</a></li>
+                        <li><a href="services.html"><i class="bi bi-chevron-right"></i> Industrial Construction</a></li>
+                        <li><a href="services.html"><i class="bi bi-chevron-right"></i> Renovation & Remodeling</a></li>
+                        <li><a href="services.html"><i class="bi bi-chevron-right"></i> Project Management</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>CONTACT INFORMATION</h4>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            <h5>Address</h5>
+                            <p>123 Construction Ave, Building City, STATE 12345</p>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            <h5>Phone</h5>
+                            <p>(123) 456-7890</p>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            <h5>Email</h5>
+                            <p>info@buildright.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 BuildRight Construction. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../slide-out-menu.js"></script>
+    <!-- Scripts -->
     <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+        // Mobile Menu Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        navToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navMenu.classList.toggle('active');
         });
         
-        // Animation on scroll (simple implementation)
-        document.addEventListener('DOMContentLoaded', function() {
-            const animatedElements = document.querySelectorAll('.animate-fade-in-up');
-            
-            function checkPosition() {
-                for (let i = 0; i < animatedElements.length; i++) {
-                    let element = animatedElements[i];
-                    let positionFromTop = element.getBoundingClientRect().top;
-                    
-                    if (positionFromTop - window.innerHeight <= 0) {
-                        element.style.opacity = "1";
-                    }
-                }
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
             }
-            
-            // Check positions on load
-            checkPosition();
-            
-            // Check positions on scroll
-            window.addEventListener('scroll', checkPosition);
         });
     </script>
-
-
 
     <!-- Universal Form Handler -->
     <script>
